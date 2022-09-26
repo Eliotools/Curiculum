@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Curiculum/static/css/main.073c9b0a.css",
+    "main.js": "/Curiculum/static/js/main.999bce24.js",
+    "static/js/787.f60e08df.chunk.js": "/Curiculum/static/js/787.f60e08df.chunk.js",
+    "static/media/logo.svg": "/Curiculum/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/Curiculum/index.html",
+    "main.073c9b0a.css.map": "/Curiculum/static/css/main.073c9b0a.css.map",
+    "main.999bce24.js.map": "/Curiculum/static/js/main.999bce24.js.map",
+    "787.f60e08df.chunk.js.map": "/Curiculum/static/js/787.f60e08df.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.999bce24.js"
+  ]
+}
