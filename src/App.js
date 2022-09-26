@@ -1,23 +1,17 @@
-import logo from './logo.svg';
+import {my_title} from './components/title'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          This is my githu page !!
+          bonjour
+          ui
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+      <my_title text="This is my githu page !!"/>
+      double ui
     </div>
   );
 }
