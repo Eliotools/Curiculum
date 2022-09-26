@@ -1,11 +1,10 @@
 *,*:before,*:after {box-sizing:inherit;margin:0; padding:20; border:0 none; position: relative;}
 
 html {
-	background: #000;
+	background: url("https://images.immediate.co.uk/production/volatile/sites/25/2019/02/HyadesY16JanD07-2dc9bb4.jpg?quality=90&webp=true&fit=975,581");
 	box-sizing:border-box;
 	font-family: 'Vollkorn', sans-serif;
 	font-size: 1rem;
-	color: #000;
 }
 
 @media screen and (min-width: 700px) {
@@ -115,15 +114,6 @@ html {
 		align-items: center;
 		height: 100%;
 		padding: 1rem;
-	}
-	h1,
-	h2 {
-		margin: 15% 0 auto;
-		font-size: calc(5vmin + 3vmax);
-		text-align: center;
-		font-weight: 700;
-		line-height: 1;
-		word-spacing: .5rem;
 	}
 	p {
 		text-align: right;
