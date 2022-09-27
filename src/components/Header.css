@@ -1,26 +1,24 @@
 .Header {
   background-color: #e5e5e5;
   top: 0px;
-  min-height: 60%;
   text-align: center;
   justify-content: flex-end;
   align-items: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
+  padding-top: 2vh;
+  margin-bottom: 5vh;
 }
 
 .Title-Container {
   display: flex;
-  padding-left: 30%;
+  padding-left: 10vw;
   }
 
 .Title + .Title{
-  padding-left: 5%  ;
+  padding-left: 5vw  ;
 }
 
 .Title {
-  font-size:2vw;
+  font-size: calc(1vmin + 1.5vmax);
   align-items: center;
   text-align: center;
 }

@@ -9,34 +9,34 @@ function Page() {
       const loisir = useRef();
     return (
   
-        <body src='' alt>
+        <body>
             <Header top={top} loisir={loisir} experience={experience} parcours={parcours}/>
             <div className='Content'>
-                    <figure ref={top}>
+                    <section ref={top}>
                         <div>
                             <h1>Talk about me</h1>
                         </div>
-                    </figure>
+                    </section>
                     <section>
                         <div>
                             <h1>talk about experiences</h1>
                         </div>
                     </section>
-                    <figure ref={experience}>
+                    <section ref={experience}>
                         <div>
                             <h1>talk about experiences</h1>
                         </div>
-                    </figure>
+                    </section>
                     <section ref={parcours}>
                         <div>
                             <h1>talk about parcours</h1>
                         </div>
                     </section>
-                    <figure ref={loisir}>
+                    <section ref={loisir}>
                         <div>
                             <h1>talk about loisir</h1>
                         </div>
-                    </figure>
+                    </section>
             </div>
         </body>
 
