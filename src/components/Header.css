@@ -2,19 +2,19 @@
   background-color: #e5e5e5;
   top: 0px;
   text-align: center;
-  justify-content: flex-end;
   align-items: center;
   padding-top: 2vh;
+  padding-bottom: 2vh;
   margin-bottom: 5vh;
 }
 
 .Title-Container {
   display: flex;
-  padding-left: 10vw;
-  }
+  padding-left: 20vw;
+}
 
 .Title + .Title{
-  padding-left: 5vw  ;
+  padding-left: 5vw;
 }
 
 .Title {
