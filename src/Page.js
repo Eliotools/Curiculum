@@ -8,6 +8,7 @@ function Page() {
       const parcours = useRef();
       const loisir = useRef();
     return (
+  
         <body src='' alt>
             <Header top={top} loisir={loisir} experience={experience} parcours={parcours}/>
             <div className='Content'>
