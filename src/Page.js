@@ -14,15 +14,15 @@ function Page() {
                 <div className='part'>
                     <h1>Talk about me</h1>
                     <div className='container'>
+                        <div className='right-container'>
+                        <img src={'https://intra.epitech.eu/file/userprofil/commentview/eliot.martin.jpg'} alt='../public/pp.png' className='pict'/>
+                        </div>
+
                         <div className='left-container'>
                             <p>21 ans21 ans21 ans21 ans21 ans21 ans21 ans21 ans21 ans21 ans21 ans21 ans</p>
                             <p>Dublin</p>
                             <p>Permis B</p>
-                        </div>
-                        <div className='right-container'>
-                            <p>21 ans21 ans21 ans21 ans21 ans21 ans21 ans21 ans21 ans21 ans21 ans21 ans</p>
-                            <p>Dublin</p>
-                            <p>Permis B</p>
+                       
                         </div>
                     </div>
                 </div>
@@ -48,7 +48,7 @@ function Page() {
                     </div>
                 </div>
                 <div className='part'>
-                    <h1>EM</h1>
+                    <h1>talk about loisir</h1>
                     <div className='container'>
                         <div className='left-container'>first</div>
                         <div className='right-container'>second</div>

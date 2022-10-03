@@ -39,3 +39,8 @@ h1 {
 .left-container {
 	margin-left: 15vw;
 }
+
+.pict {
+	width:500px;
+	height:600px;
+}
