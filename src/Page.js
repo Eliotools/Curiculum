@@ -48,7 +48,7 @@ function Page() {
                     </div>
                 </div>
                 <div className='part'>
-                    <h1>talk about loisir</h1>
+                    <h1>EM</h1>
                     <div className='container'>
                         <div className='left-container'>first</div>
                         <div className='right-container'>second</div>
