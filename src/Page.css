@@ -1,55 +1,40 @@
 *,*:before,*:after {box-sizing:inherit;margin:0; padding:20; border:0 none; position: relative;}
 
 html {
-	background: url("https://images.immediate.co.uk/production/volatile/sites/25/2019/02/HyadesY16JanD07-2dc9bb4.jpg?quality=90&webp=true&fit=975,581");
 	box-sizing:border-box;
 	font-size: 1rem;
 }
 
-section {
-	background: #e5e5e5;
-	height: 100vh;
-	margin: 10vh 0 0 auto;
-	position: sticky;
-	top: 0;
-	margin-left: 3%;
-	margin-right: 3%;
-	padding: 5vmin;
-	box-shadow: -4px -4px 8px rgba(0,0,0,.4);
-		}
-section:last-of-type {
-	margin-bottom: 0;
+.part {
+	border: 3px solid green;
+	margin-left: 10px;
+	margin-right: 10px;
+	border-color : black;
+	opacity: 0.1;
 }
 
-section:nth-child(odd):after {
-	left: 45%;
-	right: 5vmin;
+.part:hover {
+	opacity: 1;
 }
 
-section > div {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	height: 100%;
+.part + .part {
+	margin-top: 20px;
 }
 
 .container {
-	padding-top: 10vh;
 	display: flex;
-	font-size: xx-large;
+	padding-bottom: 20px;
 }
 
-.left-container {
-	border: 1px solid #fff;
-	outline: 1px dashed #fff;
-	max-width: 20px;
-	outline-offset: 1vmin;	
-	pointer-events: none;
+h1 {
+	text-align: center;
 }
 
 .right-container {
-	max-width: 20px;
-	padding-left: 40vw;
-	outline-offset: -10vmin;
-	pointer-events: none;
+	margin-right: 15vw;
+	margin-left : auto
+}
+
+.left-container {
+	margin-left: 15vw;
 }

@@ -11,59 +11,49 @@ function Page() {
   
         <body>
             <Header top={top} loisir={loisir} experience={experience} parcours={parcours}/>
-            <section ref={top}>
-                <div>
+                <div className='part'>
                     <h1>Talk about me</h1>
                     <div className='container'>
                         <div className='left-container'>
-                            <p>21 ans</p>
+                            <p>21 ans21 ans21 ans21 ans21 ans21 ans21 ans21 ans21 ans21 ans21 ans21 ans</p>
                             <p>Dublin</p>
                             <p>Permis B</p>
                         </div>
                         <div className='right-container'>
-                            <p>21 ans</p>
+                            <p>21 ans21 ans21 ans21 ans21 ans21 ans21 ans21 ans21 ans21 ans21 ans21 ans</p>
                             <p>Dublin</p>
                             <p>Permis B</p>
                         </div>
                     </div>
                 </div>
-            </section>
-            <section>
-                <div>
+                <div className='part'>
                     <h1>talk about experiences</h1>
                     <div className='container'>
                         <div className='left-container'>first</div>
                         <div className='right-container'>second</div>
                     </div>
                 </div>
-            </section>
-            <section ref={experience}>
-                <div>
+                <div className='part'>
                     <h1>talk about experiences</h1>
                     <div className='container'>
                         <div className='left-container'>first</div>
                         <div className='right-container'>second</div>
                     </div>
                 </div>
-            </section>
-            <section ref={parcours}>
-                <div>
+                <div className='part'>
                     <h1>talk about parcours</h1>
                     <div className='container'>
                         <div className='left-container'>first</div>
                         <div className='right-container'>second</div>
                     </div>
                 </div>
-            </section>
-            <section ref={loisir}>
-                <div>
+                <div className='part'>
                     <h1>talk about loisir</h1>
                     <div className='container'>
                         <div className='left-container'>first</div>
                         <div className='right-container'>second</div>
                     </div>
                 </div>
-            </section>
         </body>
 
     )
