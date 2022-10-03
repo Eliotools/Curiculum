@@ -1,3 +1,4 @@
+
 .Header {
   background-color: #282c34;
   flex-direction: column;
@@ -32,4 +33,14 @@
 
 .Title:hover {
   text-decoration: underline;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .Title {
+    font-size: 2.5vw;
+  }
+  .Title + .Title{
+    padding-left: 2vw;
+  }
 }
