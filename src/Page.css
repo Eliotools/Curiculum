@@ -1,57 +1,52 @@
-*,*:before,*:after {box-sizing:inherit;margin:0; padding:20; border:0 none; position: relative;}
-
-html {
-	box-sizing:border-box;
-	font-size: 1rem;
+.Main-container {
+	background-color: antiquewhite;
+	height: 100vh;
+	width: 100vw;
+}
+.Sub-container {
+	position: absolute;
+	top: 2.5vh;
+	left: 2.5vh;
+	background-color: rgb(56, 85, 124);
+	height: 95vh;
+	width: 70vw;
+	margin : auto;
 }
 
-.part {
-	border: 3px solid green;
-	margin-left: 10px;
-	margin-right: 10px;
-	border-color : black;
-	opacity: 0.4;
+.Side-container {
+	position: absolute;
+	top: 2.5vh;
+	right: 2.5vh;
+	background-color: rgb(3, 50, 112);
+	height: 95vh;
+	width: 25vw;
+	margin : auto;
+
 }
 
-.part:hover {
-	opacity: 1;
+.Title {
+	font-size: 40px;
 }
 
-.part + .part {
-	margin-top: 20px;
+.Text-container {
+	padding-left: 20px;
+	padding-Top: 20px;
 }
 
-.container {
-	display: flex;
-	padding-bottom: 20px;
-}
-
-h1 {
-	text-align: center;
-	font-weight: bold;
-}
-
-.left-container {
-}
-
-.right-container {
-
-
+.Text {
+	padding-left : 50px;
+	font-size : 30px;
 }
 
 .pict {
-	width:500px;
-	height:600px;
-	margin-left: 100px;
+	width: 25vw;
+	position:absolute;
+  	right: 50%;
+	top : 10vh;
+	border-radius: 20px;
+	border: 1px solid black;
 }
 
-.center {
-	margin: auto;
-	width: 50%;
-	padding: 10px;
-  }
-
-.border {
-	margin-top: 20px;
-	border: 3px solid rgb(17, 10, 12);
+p, h1{
+	color: aliceblue;
 }
