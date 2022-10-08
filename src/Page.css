@@ -26,15 +26,22 @@
 
 .Title {
 	font-size: 40px;
+	max-width: 40vw;
 }
 
 .Text-container {
 	padding-left: 20px;
 	padding-Top: 20px;
+	max-width: 60vw;
 }
 
 .Text {
 	padding-left : 50px;
+	font-size : 30px;
+}
+
+.Sub-Text {
+	padding-left : 100px;
 	font-size : 30px;
 }
 
