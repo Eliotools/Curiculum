@@ -4,9 +4,12 @@
 	width: 100vw;
 }
 .Sub-container {
+	border-radius: 5px;
+	box-shadow: 10px 10px rgba(128, 128, 128, 0.246);
 	position: absolute;
 	top: 2.5vh;
 	left: 2.5vh;
+	background-image: linear-gradient(to bottom right,rgb(56, 85, 124) , rgb(56, 85, 124), rgb(112, 156, 214));
 	background-color: rgb(56, 85, 124);
 	height: 95vh;
 	width: 70vw;
@@ -14,14 +17,23 @@
 }
 
 .Side-container {
+	border-radius: 5px;
+	box-shadow: -10px 10px rgba(128, 128, 128, 0.246);
 	position: absolute;
 	top: 2.5vh;
 	right: 2.5vh;
-	background-color: rgb(3, 50, 112);
+	background-image: linear-gradient(to bottom left,rgb(3, 50, 112) , rgb(3, 50, 112), rgb(112, 156, 214));
 	height: 95vh;
 	width: 25vw;
 	margin : auto;
+}
 
+.Sub-Text-Container {
+	height: 70vh;
+	padding-top: 50px;
+	display : flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .Title {
@@ -31,7 +43,6 @@
 
 .Text-container {
 	padding-left: 20px;
-	padding-Top: 20px;
 	max-width: 60vw;
 }
 

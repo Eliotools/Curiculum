@@ -10,26 +10,15 @@ function Page() {
         <body>
             <div className='Main-container'>
                 <div className='Sub-container'>
-                    .
                     <div className='Text-container'>
+                        <div className='Sub-Text-Container'>
                         <h1 className='Title'>ELIOT MARTIN</h1>
-                        <p className='Text'>Developper</p>
-                        <p className='Text'>Management</p>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <p className='Text'>Full stack Developpment</p>
-                        <Language></Language>
-                        <p className='Sub-Text'>Python</p>
-
+                            <div>
+                                <p className='Text'>Full stack Developpment</p>
+                                <Language></Language>
+                            </div>
+                            <p className='Text'>Management</p>
+                        </div>
                     </div>
                 </div>
                 <div className='Side-container'>

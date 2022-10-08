@@ -1,0 +1,13 @@
+.Pict-container {
+    padding-left: 10vw;
+    width: 30vw;
+}
+
+.Pict-container-front, .Pict-container-back {
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+}
+.Language {
+    width: 10vh;
+}
