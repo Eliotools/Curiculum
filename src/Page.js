@@ -1,5 +1,4 @@
-import Header from './components/Header'
-import React, { useRef } from 'react';
+import React from 'react';
 import './Page.css'
 import pp from './asset/pp.png'
 import Language from './components/language'
@@ -7,7 +6,6 @@ import Language from './components/language'
 function Page() {
     return (
   
-        <body>
             <div className='Main-container'>
                 <div className='Sub-container'>
                     <div className='Text-container'>
@@ -25,8 +23,6 @@ function Page() {
                     <img src={pp} alt='PP' className='pict'/>
                 </div>
             </div>
-        </body>
-
     )
 }
 

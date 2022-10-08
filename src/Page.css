@@ -5,7 +5,6 @@
 }
 .Sub-container {
 	border-radius: 5px;
-	box-shadow: 10px 10px rgba(128, 128, 128, 0.246);
 	position: absolute;
 	top: 2.5vh;
 	left: 2.5vh;
@@ -14,11 +13,11 @@
 	height: 95vh;
 	width: 70vw;
 	margin : auto;
+	z-index: 1;
 }
 
 .Side-container {
 	border-radius: 5px;
-	box-shadow: -10px 10px rgba(128, 128, 128, 0.246);
 	position: absolute;
 	top: 2.5vh;
 	right: 2.5vh;
@@ -62,7 +61,7 @@
   	right: 50%;
 	top : 10vh;
 	border-radius: 20px;
-	border: 1px solid black;
+	z-index: 2;
 }
 
 p, h1{
