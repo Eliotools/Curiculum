@@ -10,7 +10,6 @@ body {
 }
 .Sub-container {
 	border-radius: 5px;
-	top: 2.5vh;
 	left: 2.5vh;
 	background-image: linear-gradient(to bottom right,rgb(56, 85, 124) , rgb(56, 85, 124), rgb(112, 156, 214));
 	height: 95vh;
@@ -21,7 +20,6 @@ body {
 
 .Side-container {
 	border-radius: 5px;
-	top: 2.5vh;
 	right: 2.5vh;
 	background-image: linear-gradient(to bottom left,rgb(3, 50, 112) , rgb(3, 50, 112), rgb(112, 156, 214));
 	height: 95vh;
@@ -37,14 +35,12 @@ body {
 
 .Sub-Text-Container {
 	height: 70vh;
-	padding-top: 50px;
 	display : flex;
 	flex-direction: column;
 	justify-content: space-between;
 }
 
 .Title {
-	font-size: 40px;
 	max-width: 40vw;
 }
 
@@ -55,7 +51,6 @@ body {
 
 .Text {
 	padding-left : 50px;
-	font-size : 30px;
 }
 
 .Sub-Text {
@@ -63,15 +58,41 @@ body {
 	font-size : 30px;
 }
 
+.Side-text-container {
+	position:relative;
+	top: -20vh;
+	left : 9vw;
+}
+
+.Side-text + .Side-text {
+	padding-top: 20px;
+}
+
+.Side-text {
+	font-size: 1.3vw;
+}
+
 .pict {
 	width: 25vw;
 	position:relative;
-  	right: 50%;
+  	right: 70%;
 	top : 10vh;
 	border-radius: 20px;
 	z-index: 2;
 }
 
-p, h1{
+p, h1, a, h2{
 	color: aliceblue;
+}
+
+h1 {
+	font-size: 5vw;
+}
+
+h2 {
+	font-size : 3vw
+}
+
+p {
+	font-size: 1.2;
 }

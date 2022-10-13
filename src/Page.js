@@ -12,15 +12,22 @@ function Page() {
                     <div className='Sub-Text-Container'>
                     <h1 className='Title'>ELIOT MARTIN</h1>
                         <div>
-                            <p className='Text'>Full stack Developpment</p>
+                            <h2 className='Text'>Full stack Developpment</h2>
                             <Language></Language>
                         </div>
-                        <p className='Text'>Management</p>
+                        <h2 className='Text'>Management</h2>
                     </div>
                 </div>
             </div>
             <div className='Side-container'>
-                <img src={pp} alt='PP' className='pict'/>
+            <img src={pp} alt='PP' className='pict'/>
+                <div className='Side-text-container'>
+                    <p className='Side-text'>Eliot.martin@epitech.eu</p>
+                    <p className='Side-text'>(+33)6.12.96.53.98</p>
+                    <p className='Side-text'>Lille Paris</p>
+                    <p className='Side-text'><a href='https://github.com/Eliotools' rel="noreferrer" target="_blank">Github</a></p>
+                    <p className='Side-text'><a href='https://github.com/Eliotools' rel="noreferrer" target="_blank">LinkedIn</a></p>
+                </div>
             </div>
         </div>
             <div className='Main-container'>
@@ -29,15 +36,15 @@ function Page() {
                         <div className='Sub-Text-Container'>
                             <h1 className='Title'>Experiences</h1>
                             <div>
-                                <h1 className='Text'>Epitech</h1>
+                                <h2 className='Text'>Epitech Lille</h2>
                                 <p className='Text'>Epitech</p>
                             </div>
                             <div>
-                                <h1 className='Text'>Décathlon</h1>
+                                <h2 className='Text'>Décathlon</h2>
                                 <p className='Text'>Epitech</p>
                             </div>
                             <div>
-                                <h1 className='Text'>Dublin</h1>
+                                <h2 className='Text'>Dublin</h2>
                                 <p className='Text'>Epitech</p>
                             </div>
                         </div>
@@ -47,16 +54,15 @@ function Page() {
                 <div className='Sub-Text-Container xp'>
                             <p className='Title'></p>
                             <div>
-                                <h1 className='Text'>2024</h1>
+                                <h2 className='Text'>2024</h2>
                                 <p className='Text'></p>
                             </div>
                             <div>
-                                <h1 className='Text'>2022</h1>
+                                <h2 className='Text'>2022</h2>
                                 <p className='Text'></p>
                             </div>
                             <div>
-                                <h1 className='Text'>2022/2023</h1>
-                                <p className='Text'>Epitech</p>
+                                <h2 className='Text'>2022/2023</h2>
                             </div>
                         </div>
                 </div>
