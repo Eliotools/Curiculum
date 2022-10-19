@@ -82,6 +82,10 @@ body {
 	justify-content: space-between;
 }
 
+.Flex-row {
+	display : flex;
+}
+
 .pict {
 	width: 25vw;
 	position:absolute;
