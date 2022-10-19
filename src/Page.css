@@ -1,12 +1,9 @@
 body {
 	background-color: antiquewhite;
 	color : antiquewhite;
+	scroll-snap-type: y mandatory;
 	overflow-x: hidden;
-	scroll-snap-type: x mandatory;
-}
 
-section {
-	scroll-snap-align: start;
 }
 
 .Main-container {
@@ -14,22 +11,45 @@ section {
 	height: 100vh;
 	width: 100vw;
 }
+
 .Left-container {
 	border-radius: 5px;
 	left: 2.5vh;
-	background-image: linear-gradient(to bottom right,rgb(56, 85, 124) , rgb(56, 85, 124), rgb(112, 156, 214));
+	background-image: linear-gradient(to bottom right,rgb(56, 85, 124) , rgb(56, 85, 124), rgb(56, 85, 124), rgb(112, 156, 214));
 	height: 95vh;
-	width: 70vw;
 	margin : auto;
 	z-index: 1;
+}
+
+.size-1-left {
+	width: 70vw;
+}
+
+.size-1-right {
+	width: 25vw;
+}
+
+.size-2-left {
+	width: 80vw;
+}
+
+.size-2-right {
+	width: 15vw;
+}
+
+.size-3-left {
+	width: 15vw;
+}
+
+.size-3-right {
+	width: 80vw;
 }
 
 .Right-container {
 	border-radius: 5px;
 	right: 2.5vh;
-	background-image: linear-gradient(to bottom left,rgb(3, 50, 112) , rgb(3, 50, 112), rgb(112, 156, 214));
+	background-image: linear-gradient(to bottom left,rgb(3, 50, 112) , rgb(3, 50, 112), rgb(3, 50, 112), rgb(112, 156, 214));
 	height: 95vh;
-	width: 25vw;
 	margin : auto;
 }
 
@@ -50,6 +70,8 @@ section {
 
 .Date-node {
 	align-self: center;
+	font-size : calc(2vh + 1 vw);
+
 }
 
 .Flex-col {
