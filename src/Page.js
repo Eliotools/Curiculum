@@ -22,7 +22,7 @@ function Page() {
                     <div className='Flex-col'>
                         <p className='Info-node' >Eliot.martin@epitech.eu</p>
                         <p className='Info-node'>(+33)6.12.96.53.98</p>
-                        <p className='Info-node'>Lille Paris</p>
+                        <p className='Info-node'>Lille - Paris</p>
                         <p className='Info-node'><a href='https://github.com/Eliotools' rel="noreferrer" target="_blank">Github</a></p>
                         <p className='Info-node'><a href='https://www.linkedin.com/in/eliot-martin-9599401b1/' rel="noreferrer" target="_blank">LinkedIn</a></p>
                     </div>
@@ -32,12 +32,12 @@ function Page() {
             <section className='Main-container'>
                 <div className='Left-container size-2-left'>
                     <div className='Text-container'>
-                        <h1>Experiences Technique</h1>
+                        <h1>Experiences Techniques</h1>
                         <div className='Text-container Flex-col' style={{height : '80%' }}>
                             <p className='xp'>
                                 <h2>Epitech Lille</h2>
                                 <div className='Text-container'>
-                                    Master d’expert en developpment.
+                                    Master d’expert en technologie de l'information.
                                     <br/>
                                     Apprentissage:
                                         <li className='xp'>Gestion de projets : scrum / agile</li>
@@ -47,9 +47,9 @@ function Page() {
                             <p className='xp'>
                                 <h2>Décathlon btwin village Lille</h2>
                                 <div className='Text-container'>
-                                    Stage en alterance.
+                                    Stage en alterance durant 8 mois.
                                     <br/>
-                                    Amélioration d’une App de gestion de maintenance
+                                    Amélioration d’une application de gestion de maintenance
                                         <li className='xp'>HTML / CSS</li>
                                         <li className='xp'>Google App Script</li>
                                 </div>
@@ -70,7 +70,7 @@ function Page() {
                 <div className='Right-container size-2-right'>
                     <div className='Flex-col' style={{height : '80%', alignContent : 'end'}}>
                         <div></div>
-                        <h2 className='Date-node'>2024</h2>
+                        <h2 className='Date-node'>2019/2024</h2>
                         <h2 className='Date-node'>2022</h2>
                         <h2 className='Date-node'>2022/2023</h2>
                     </div>
@@ -79,12 +79,12 @@ function Page() {
             <section className='Main-container'>
                 <div className='Left-container size-2-left'>
                     <div className='Text-container'>
-                        <h1>Experiences Associative</h1>
+                        <h1>Experiences Annexe</h1>
                         <div className='Text-container Flex-col' style={{height : '80%' }}>
                             <p className='xp'>
                                 <h2>Respir@ction</h2>
                                 <div className='Text-container'>
-                                Hackathon avec l’afrpal sur 2 jours:
+                                Hackathon avec l’AFRAL sur 2 jours:
                                         <li className='xp'>Ideation d’un project autour de l’alergie</li>
                                         <li className='xp'>Marketing, User Experience, Maquette</li>
                                 </div>
@@ -100,8 +100,8 @@ function Page() {
                             <p className='xp'>
                                 <h2>Solidays</h2>
                                 <div className='Text-container'>
-                                    Partitipation au festival solidays avec l'afpral.
-                                        <li className='xp'>Présence sur le village des association durant 3 jours</li>
+                                    Partitipation au festival solidays avec l'AFPRAL.
+                                        <li className='xp'>Présence sur le village des associations, durant 3 jours</li>
                                         <li className='xp'>Mise en avant de l’association et animation sur le stand</li>
                                 </div>
                             </p>
@@ -136,13 +136,13 @@ function Page() {
                 </div>
                 <div className='Right-container size-3-right'>
                 <div className='Text-container'>
-                        <h1>Loisir</h1>
+                        <h1>Loisirs</h1>
                         <div className='Text-container Flex-col' style={{height : '80%' }}>
                             <p className='xp'>
                                 <h2>Langues</h2>
                                 <div className='Text-container Flex-row'>
                                     <p>
-                                        angalais
+                                        Anglais
                                         <li className='xp'>Niveau C1</li>
                                         <li className='xp'>TOEIC 800 points</li>
                                     </p>
@@ -164,8 +164,8 @@ function Page() {
                             <p className='xp'>
                                 <h2>Occupation</h2>
                                 <div className='Text-container'>
-                                    <li className='xp'>Jeu de carte : Magic the Gathering</li>
-                                    <li className='xp'>Jeu vidéo : Minecraft / Hearhstone</li>
+                                    <li className='xp'>Jeux de cartes : Magic the Gathering</li>
+                                    <li className='xp'>Jeux vidéos : Minecraft / Hearhstone</li>
                                 </div>
                             </p>
                         </div>

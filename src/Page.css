@@ -105,6 +105,10 @@ h1 {
 	line-height: 1%;
 }
 
+a {
+	color : antiquewhite
+}
+
 h2 {
 	font-size : 3vw;
 	line-height: 4%;
@@ -112,7 +116,7 @@ h2 {
 }
 
 p, li {
-	font-size: 2vw;
+	font-size: 3vw;
 
 }
 
