@@ -1,5 +1,6 @@
 body {
 	background-color: antiquewhite;
+	color : antiquewhite;
 	overflow-x: hidden;
 	scroll-snap-type: x mandatory;
 }
@@ -35,12 +36,16 @@ section {
 .Text-container {
 	padding-left: 5vw;
 	height: 100%;
+}
 
+.xp {
+	font-size: 2vh;
 }
 
 .Info-node {
 	padding-right: 10px;
 	align-self: end;
+	font-size: 1.5vw;
 }
 
 .Date-node {
@@ -48,7 +53,8 @@ section {
 }
 
 .Flex-col {
-	height: 50vh;
+	height: 80%;
+	padding-top: -20px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -65,10 +71,6 @@ section {
 
 .Space-between + .Space-between {
 	margin-top: 20%;
-}
-
-p, h1, a, h2, li{
-	color: aliceblue;
 }
 
 h1 {
@@ -90,9 +92,4 @@ p, li {
 
 li {
 	margin-left: 2vw;
-}
-
-li:first-child {
-	line-height: 3%;
-
 }
