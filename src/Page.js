@@ -24,7 +24,7 @@ function Page() {
                         <p className='Info-node'>(+33)6.12.96.53.98</p>
                         <p className='Info-node'>Lille Paris</p>
                         <p className='Info-node'><a href='https://github.com/Eliotools' rel="noreferrer" target="_blank">Github</a></p>
-                        <p className='Info-node'><a href='https://github.com/Eliotools' rel="noreferrer" target="_blank">LinkedIn</a></p>
+                        <p className='Info-node'><a href='https://www.linkedin.com/in/eliot-martin-9599401b1/' rel="noreferrer" target="_blank">LinkedIn</a></p>
                     </div>
                 </div>
                 <img src={pp} alt='PP' className='pict'/>
