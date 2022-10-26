@@ -1,6 +1,10 @@
 .Pict-container {
     padding-left: 10vw;
     width: 30vw;
+    border: 10px black;
+
+
+
 }
 
 .Pict-container-front, .Pict-container-back {
@@ -8,8 +12,12 @@
     justify-content: space-around;
     display: flex;
     padding-top: 20px;
-    border-radius: 100%;
+
 }
 .Language {
     width: 10vh;
+    background-color: aqua;
+    border-radius: 100%;
+
+
 }
