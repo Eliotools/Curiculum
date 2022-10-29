@@ -1,19 +1,41 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import $ from "jquery";
 import './Page.css'
 import { useRef } from 'react';
 import pp from './asset/pp.png'
 import Language from './components/language'
 import useScrollSnap from 'react-use-scroll-snap'
 
+const findData = ((setData) => {
+    $.ajax({
+        url: "./resumeData.json",
+        dataType: "json",
+        cache: false,
+        success: function(data) {
+        setData(data)
+        },
+        error: function(xhr, status, err) {
+        console.log(err);
+        alert(err);
+        }
+    })
+})
+
 function Page() {
+    const [data, setData] = useState(0);
     const scrollRef = useRef(null);
     useScrollSnap({ ref: scrollRef, duration: 10, delay: 50 });
+
+    useEffect(() => {
+        if (!data)
+            setData(findData(setData))
+    },[data])
     return (
         <div className='Main'>
             <section className='Main-container' ref={scrollRef}>
                 <div className='Left-container size-1-left'>
                     <div className='Text-container'>
-                        <h1>ELIOT MARTIN</h1>
+                        <h1>{data ? data.main.title : 'nop'}</h1>
                         <div className='Text-container Flex-col'>
                             <h2>Full stack Developpment</h2>
                             <Language></Language>
