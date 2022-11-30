@@ -98,8 +98,13 @@ h1, h2, h3, h4, h5, li, a, .date {
 h1 {
     margin-left: 10%;
     font-size: 70px;
-    margin-block-end: 3vh;
+    margin-block-end: 2vh;
+    margin-block-start: 3vh;
+}
+
+.Title {
     margin-block-start: 5vh;
+    margin-block-end: 5vh;
 }
 
 h2 {
@@ -126,3 +131,43 @@ h4, li {
     justify-content: space-between;
 }
 
+.more {
+    justify-self: end;
+    top: 40px;
+    right: 10%;
+    z-index: 10;
+    margin-left: 90%;
+    height: 30px;
+    width: 30px;
+    border-style: solid;
+    border-radius: 100%;
+    border-width: 1px;
+    border-color:antiquewhite;
+}
+
+.more:hover ~ .modal {
+    display: block;
+}
+
+.modal {
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 5%;
+    top: 5%;
+    width: 50%; /* Full width */
+    height: 80%; /* Full height */
+    overflow: auto; 
+    background-color:antiquewhite;
+    border-radius: 10px;
+    display: none;
+}
+
+.modal > h2 {
+    color: black;
+}
+.modal > h3 {
+    color: black;
+}
+.modal > li {
+    color: black;
+}
