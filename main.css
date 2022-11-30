@@ -59,6 +59,10 @@ body {
 }
 
 .date {
+    font-size: 300%;
+}
+
+.info {
     font-size: 200%;
 }
 
@@ -89,7 +93,7 @@ body {
     width: 300%;
 }
 
-h1, h2, h3, h4, h5, li, a, .date {
+h1, h2, h3, h4, h5, li, a, .date, .info {
     color: antiquewhite;
     margin-block-end: 1vh;
     margin-block-start: 1vh;
@@ -125,10 +129,21 @@ h4, li {
 }
 
 .nav {
-    padding-left:25%;
-    width: 50%;
+    font-size: 125%;
+    margin-top : auto;
+    margin-bottom: 20px;
+    place-content: end;
+    padding-left:15%;
+    width: 70%;
     display: flex;
     justify-content: space-between;
+}
+
+.language {
+    display: flex;
+    align-items: center;
+    margin-top: 10%;
+    margin-left: -10%;
 }
 
 .more {
@@ -150,8 +165,11 @@ h4, li {
 }
 
 .modal {
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
     left: 5%;
     top: 5%;
     width: 50%; /* Full width */
@@ -170,4 +188,49 @@ h4, li {
 }
 .modal > li {
     color: black;
+}
+
+.icon {
+    width: 100px;
+    height: 100px;
+}
+
+.icon-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+}
+
+.flag {
+    position: relative;
+    border-radius: 100%;
+    left : 30%;
+    height: 20px;
+    width: 20px;
+    top : 40%;
+    opacity: 0;
+    transition: all 2s ;
+}
+
+.flag-trigger:hover .flag{
+    opacity: 1;
+    left : 50%
+}
+
+.videogame {
+    position: relative;
+    border-radius: 100%;
+    left : 30%;
+    height: 20px;
+    width: 20px;
+    top : 40%;
+    opacity: 0;
+    transition: all 2s ;
+}
+
+.videogame-trigger:hover .videogame{
+    opacity: 1;
+    left : 50%
 }
