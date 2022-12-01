@@ -161,6 +161,10 @@ h4, li {
     display: block;
 }
 
+.modal:hover {
+    display: block;
+}
+
 .modal {
     position: fixed;
     display: flex;
