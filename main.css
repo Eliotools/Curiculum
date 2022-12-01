@@ -175,7 +175,7 @@ h4, li {
     top: 5%;
     width: 50%; /* Full width */
     height: 80%; /* Full height */
-    overflow: auto; 
+    overflow: hidden; 
     background-color:antiquewhite;
     border-radius: 10px;
     display: none;
