@@ -101,7 +101,7 @@ h1, h2, h3, h4, h5, li, a, .date, .info {
 
 h1 {
     margin-left: 10%;
-    font-size: 70px;
+    font-size: 6vh;
     margin-block-end: 2vh;
     margin-block-start: 3vh;
 }
@@ -113,7 +113,7 @@ h1 {
 
 h2 {
     margin-left: 20%;
-    font-size: 50px;
+    font-size: 4vh;
     margin-block-start: 2vh;
 
 }
@@ -191,8 +191,8 @@ h4, li {
 }
 
 .icon {
-    width: 100px;
-    height: 100px;
+    width: 10vh;
+    height: 10vh;
 }
 
 .icon-container {
