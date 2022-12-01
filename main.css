@@ -161,7 +161,7 @@ h4, li {
     display: block;
 }
 
-.modal:hover {
+.modal.container:hover {
     display: block;
 }
 
