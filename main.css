@@ -147,11 +147,9 @@ h4, li {
 }
 
 .more {
-    justify-self: end;
-    top: 40px;
-    right: 10%;
     z-index: 10;
     margin-left: 90%;
+    margin-top: -4vh;
     height: 30px;
     width: 30px;
     border-style: solid;
