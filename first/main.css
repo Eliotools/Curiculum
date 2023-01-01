@@ -1,0 +1,233 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+    overflow: hidden;
+    background-color: antiquewhite;
+}
+
+.main {
+  display: flex;
+  overflow: auto;
+  flex: none;
+  height: 100%;
+  width: 100%;
+  flex-flow: column nowrap;
+
+}
+
+
+.y.mandatory-scroll-snapping {
+  scroll-snap-type: y mandatory;
+}
+.main > div {
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: center;
+    flex: none
+}
+
+.pict {
+    margin-top : 50px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+}
+
+.container {
+    height: auto;
+    margin : 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+
+}
+.right {
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    background-image: linear-gradient(to bottom left,rgb(3, 50, 112) , rgb(3, 50, 112), rgb(3, 50, 112), rgb(112, 156, 214));
+}
+
+.date {
+    font-size: 300%;
+}
+
+.info {
+    font-size: 200%;
+}
+
+.left {
+    background-image: linear-gradient(to bottom right,rgb(56, 85, 124) , rgb(56, 85, 124), rgb(56, 85, 124), rgb(112, 156, 214));
+    width: 100%;
+}
+
+.last {
+    background-image: linear-gradient(to bottom left,rgb(3, 50, 112) , rgb(3, 50, 112), rgb(3, 50, 112), rgb(112, 156, 214));
+}
+
+.sub-container {
+    display: flex;
+    height: 100%;
+}
+
+.title > .right {
+    width: 40%;
+}
+.ex-pro > .right {
+    width: 40%;
+}
+.ex-func > .right {
+    width: 40%;
+}
+.game > .last {
+    width: 300%;
+}
+
+h1, h2, h3, h4, h5, li, a, .date, .info {
+    color: antiquewhite;
+    margin-block-end: 1vh;
+    margin-block-start: 1vh;
+}
+
+h1 {
+    margin-left: 10%;
+    font-size: 6vh;
+    margin-block-end: 2vh;
+}
+
+.Title {
+    margin-block-start: 5vh;
+    margin-block-end: 5vh;
+}
+
+h2 {
+    margin-left: 20%;
+    font-size: 4vh;
+    margin-block-start: 2vh;
+
+}
+
+h3 {
+    margin-left: 25%;
+    margin-block-end: 0.5vh;
+    margin-block-start: 0.5vh;
+}
+
+h4, li {
+    margin-left: 30%;
+}
+
+.nav {
+    font-size: 125%;
+    margin-top : auto;
+    margin-bottom: 20px;
+    place-content: end;
+    padding-left:15%;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.language {
+    display: flex;
+    align-items: center;
+    margin-top: 10%;
+    margin-left: -10%;
+}
+
+.more {
+    position: relative;
+    z-index: 10;
+    top : 30px;
+    left : 70%;
+    height: 30px;
+    width: 30px;
+    border-style: solid;
+    border-radius: 100%;
+    border-width: 1px;
+    border-color:antiquewhite;
+}
+
+.more:hover ~ .modal {
+    display: block;
+}
+
+.modal {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+    left: 5%;
+    top: 5%;
+    width: 50%; /* Full width */
+    height: 80%; /* Full height */
+    overflow: auto; 
+    background-color:antiquewhite;
+    border-radius: 10px;
+    display: none;
+}
+
+.modal > h2 {
+    color: black;
+}
+.modal > h3 {
+    color: black;
+}
+.modal > li {
+    color: black;
+}
+
+.icon {
+    width: 10vh;
+    height: 10vh;
+}
+
+.icon-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+}
+
+.flag {
+    position: relative;
+    border-radius: 100%;
+    left : 30%;
+    height: 20px;
+    width: 20px;
+    top : 40%;
+    opacity: 0;
+    transition: all 2s ;
+}
+
+.flag-trigger:hover .flag{
+    opacity: 1;
+    left : 50%
+}
+
+.videogame {
+    position: relative;
+    border-radius: 100%;
+    left : 30%;
+    height: 20px;
+    width: 20px;
+    top : 40%;
+    opacity: 0;
+    transition: all 2s ;
+}
+
+.videogame-trigger:hover .videogame{
+    opacity: 1;
+    left : 50%
+}
