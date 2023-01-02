@@ -2,25 +2,23 @@ html,
 body {
   height: 100vh;
   overflow: hidden;
-  background-color: #1A120B;
+  background-image: linear-gradient(to bottom left,rgb(3, 50, 112) , rgb(3, 50, 112), rgb(3, 50, 112), rgb(112, 156, 214));
 }
 
 .main {
   overflow: scroll;
   overflow-x: hidden;
-  height: 100vh;
+  height: 150vh;
   scroll-snap-points-y: repeat(100vh);
   scroll-snap-type: y mandatory;
 }
 
-.main > div {
-    width: 90%;
-    height: 100vh;
+.part {
+    height: 150vh;
     margin : 5% 5% 5% 5%;
     scroll-snap-align: center;
-    position: relative;
+    overflow:visible;
 }
-
 
 .hidden {
     opacity: 0;
@@ -33,7 +31,7 @@ body {
 }
 
 h1, h2, a, li, p {
-  color: #D5CEA3;
+  color:antiquewhite;
 }
 
 h1 {
@@ -92,6 +90,7 @@ h1 {
   opacity: 1;
 }
 
+
 @media only screen and (max-width: 600px) { /* PHONE */
   .title-container {
     flex-direction: column;
@@ -119,7 +118,7 @@ h1 {
   .modal {
     height: 80vh;
     margin : auto;
-    background-color: #D5CEA3;
+    background-color:antiquewhite;
     position: fixed;
     flex-direction: column;
     justify-content: center;
@@ -135,8 +134,13 @@ h1 {
   .button {
     width: 20px;
     height: 20px;
-    color: #D5CEA3;
+    color:antiquewhite;
     position:relative;
+    border: solid antiquewhite 1px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .button:hover ~ .modal {
@@ -154,14 +158,12 @@ h1 {
 
 @media only screen and (min-width: 600px) { /* PC */
   .ex-pro > div {
-    margin-top: 50px;
     opacity: 0.5;
   }
 
-  .ex-pro > div {
-    margin-top: 50px;
-  }
   .ex-pro {
+    margin-top : 100px;
+    margin-bottom : 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -169,5 +171,11 @@ h1 {
 
   .pc {
     display : none
+  }
+
+  .border {
+    padding: 20px;
+    border: solid antiquewhite 2px;
+    border-radius: 5px;
   }
 }
