@@ -15,7 +15,7 @@ body {
 
 .main > div {
     width: 90%;
-    height: 90vh;
+    height: 100vh;
     margin : 5% 5% 5% 5%;
     scroll-snap-align: center;
     position: relative;
@@ -68,7 +68,7 @@ h1 {
 }
 
 .pict {
-  height: 50vh;
+  width: 20vw ;
   border-radius: 10px;
 }
 
@@ -81,5 +81,21 @@ h1 {
 
 .nav {
   text-align: center;
-  margin-top : 20vh
+  vertical-align: bottom;
+}
+
+@media only screen and (max-width: 600px) {
+  .title-container {
+    flex-direction: column;
+    justify-content: start;
+  }
+
+
+  .title-container > div {
+    width: 90vw;
+  }
+
+  .pict {
+    width: 30vw;
+  }
 }
