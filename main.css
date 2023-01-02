@@ -9,14 +9,11 @@ body {
   overflow: scroll;
   overflow-x: hidden;
   height: 150vh;
-  scroll-snap-points-y: repeat(100vh);
-  scroll-snap-type: y mandatory;
 }
 
 .part {
-    height: 150vh;
+    height: 100vh;
     margin : 5% 5% 5% 5%;
-    scroll-snap-align: center;
     overflow:visible;
 }
 
