@@ -8,13 +8,23 @@ body {
 .main {
   overflow: scroll;
   overflow-x: hidden;
-  height: 150vh;
+  height: 100%;
 }
+
 
 .part {
     height: 100vh;
-    margin : 5% 5% 5% 5%;
+    margin : 5% 5% 0% 5%;
+    padding-top: 30px;
     overflow:visible;
+}
+
+.separator {
+  background-color: antiquewhite;
+  height: 1px;
+  width: 90%;
+  margin-left : 5%;
+  border-radius: 10%;
 }
 
 .hidden {
@@ -77,14 +87,6 @@ h1 {
 .nav {
   text-align: center;
   margin-top: 30px;
-}
-
-.ex-pro > div {
-  opacity: 0.5;
-}
-
-.ex-pro > div:hover {
-  opacity: 1;
 }
 
 
@@ -174,5 +176,13 @@ h1 {
     padding: 20px;
     border: solid antiquewhite 2px;
     border-radius: 5px;
+  }
+
+  .ex-pro > div {
+    opacity: 0.5;
+  }
+  
+  .ex-pro > div:hover {
+    opacity: 1;
   }
 }
