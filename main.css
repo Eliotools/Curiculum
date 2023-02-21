@@ -2,7 +2,7 @@ html,
 body {
   height: 100vh;
   overflow: hidden;
-  background-image: linear-gradient(to bottom left,rgb(3, 50, 112) , rgb(3, 50, 112), rgb(3, 50, 112), rgb(112, 156, 214));
+  background-color: #171717;
 }
 
 .main {
@@ -25,8 +25,7 @@ body {
   width: 90%;
   margin-left : 5%;
   border-radius: 10%;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  margin-top: 20px;
 }
 
 .hidden {
@@ -45,6 +44,10 @@ h1, h2, a, li, p {
 
 h1 {
   text-align: center;
+}
+
+.part > h1 {
+  font-size: 4vw;
 }
 
 .icon {
@@ -87,12 +90,18 @@ h1 {
 }
 
 .nav {
+  display: flex;
+  justify-content: space-evenly;
   text-align: center;
   margin-top: 30px;
 }
 
+.nav > p, .nav > a {
+  width: 10vw;
+}
 
-@media only screen and (max-width: 600px) { /* PHONE */
+
+@media only screen and (max-width: 1200px) { /* PHONE */
   .title-container {
     flex-direction: column;
     justify-content: start;
@@ -153,11 +162,11 @@ h1 {
   }
 
   .modal > div > h2, .modal > div > p, .modal > div > li {
-    color :#1A120B;
+    color :#171717;
   }
 }
 
-@media only screen and (min-width: 600px) { /* PC */
+@media only screen and (min-width: 1200px) { /* PC */
   .ex-pro > div {
     opacity: 0.5;
   }
