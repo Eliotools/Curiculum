@@ -13,8 +13,7 @@ body {
 
 
 .part {
-    height: 100vh;
-    margin : 5% 5% 0% 5%;
+    margin : 0 5% 0 5%;
     padding-top: 30px;
     overflow:visible;
 }
@@ -25,7 +24,12 @@ body {
   width: 90%;
   margin-left : 5%;
   border-radius: 10%;
+<<<<<<< HEAD
   margin-top: 20px;
+=======
+  margin-top: 50px;
+  margin-bottom: 50px;
+>>>>>>> 8338787e19bddb06c0ab1a5e5f9fac7ec1fcec62
 }
 
 .hidden {
