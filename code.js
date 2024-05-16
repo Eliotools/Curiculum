@@ -221,12 +221,12 @@ const buildCompetence = (node) => {
                 }
             }}
         },
-        onClick: function(_,index) {
-            if (!index[0]) {
-                return
-            }
-            triggerModal(index[0].index)
-        }
+        // onClick: function(_,index) {
+        //     if (!index[0]) {
+        //         return
+        //     }
+        //     triggerModal(index[0].index)
+        // }
         }
     });
     return
