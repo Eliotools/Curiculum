@@ -274,7 +274,7 @@ personal :
         "birthDay" : "23/01/2001",
         "phone" : "+33.6.12.96.53.98",
         "email" : "eliot.martin@hotmail.fr",
-        "pict" : "profil.jpg",
+        "pict" : "asset/profil.jpg",
         "study" :"Bac +5",
         "job" : ["Developpeur", "Scrum Master", "Project Owner"],
     },
