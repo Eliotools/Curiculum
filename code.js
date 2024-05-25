@@ -190,7 +190,8 @@ const buildCompetence = (node) => {
         datasets: [{
             label: 'Connaissance global / 5',
             data: DATA.competence.content.map((elem) => elem.value),
-            borderWidth: 2
+            borderWidth: 2,
+            backgroundColor : DATA.competence.content.map((elem) => elem.color ?? 'blue'),
         }]
         },
         options: {
@@ -201,7 +202,6 @@ const buildCompetence = (node) => {
                
             },
             x : { ticks: {
-                // Include a dollar sign in the ticks
                 callback: function(value, index, ticks) {
                     switch (value) {
                         case 0 : 
@@ -370,6 +370,7 @@ experience : {
             {
                 name : 'HTML/CSS',
                 value : '4',
+                color : 'rgba(47, 106, 241, 0.2)',
                 graph : {
                     values : ['web', 'animation', 'responive', 'autonomie'],
                     keys : ['100', '20', '80', '100'] 
@@ -378,6 +379,7 @@ experience : {
             {
                 name : 'JavaScript',
                 value : '5',
+                color : 'rgba(247, 224, 41, 0.5)',
                 graph : {
                     values : ['web', 'animation', 'responive', 'autonomie'],
                     keys : ['100', '20', '80', '100'] 
@@ -386,6 +388,7 @@ experience : {
             {
                 name : 'React Native',
                 value : '4',
+                color : 'rgba(103, 218, 251, 0.5)',
                 graph : {
                     values : ['web', 'animation', 'responive', 'autonomie'],
                     keys : ['100', '20', '80', '100'] 
@@ -393,6 +396,7 @@ experience : {
             },  {
                 name : 'Flutter',
                 value : '5',
+                color : 'rgba(89, 199, 248, 0.5)',
                 graph : {
                     values : ['web', 'animation', 'responive', 'autonomie'],
                     keys : ['100', '20', '80', '100'] 
@@ -400,6 +404,7 @@ experience : {
             },  {
                 name : 'Python',
                 value : '5',
+                color: 'rgba(89, 199, 248, 0.5)',
                 graph : {
                     values : ['web', 'animation', 'responive', 'autonomie'],
                     keys : ['100', '20', '80', '100'] 
@@ -407,6 +412,7 @@ experience : {
             },  {
                 name : 'C',
                 value : '4',
+                color : 'rgba(62, 117, 164, 0.5)',
                 graph : {
                     values : ['web', 'animation', 'responive', 'autonomie'],
                     keys : ['100', '20', '80', '100'] 
@@ -414,6 +420,7 @@ experience : {
             },  {
                 name : 'C++',
                 value : '3',
+                color : 'rgba(105, 157, 211, 0.5)',
                 graph : {
                     values : ['web', 'animation', 'responive', 'autonomie'],
                     keys : ['100', '20', '80', '100'] 
@@ -424,8 +431,8 @@ experience : {
     eip : {
         title : 'EIP',
         description : "L'Epitech Inovative Project, c'est le projet de fin d'étude à Epitech<br>De la 3e à la 5e année les groupe de 4 à 10 étudiants créent leur project et le poussent jusqu'a une hypothetique commercialisation.<br><br><br>",
-        dedal_description : "J'ai eu la chance d'être pendent 2 ans le responsable du groupe DEDAL, avec lequel nous sommes années jusqu'en finale national pour présenter notre project d'application mobile simplifiant les visites touristiques.<br>",
-        image : 'https://dedal-showcasewebsite.vercel.app/images/logo-Dedal.png',
+        dedal_description : "J'ai eu la chance d'être pendent 2 ans le responsable du groupe DEDAL, avec lequel nous sommes années jusqu'en finale national pour présenter notre project d'application mobile simplifiant les visites touristiques.<br><br>Accéder au site :",
+        image : './asset/dedal.png',
         showcase : 'https://dedal-showcasewebsite.vercel.app/'
     }
 
