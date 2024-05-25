@@ -182,7 +182,28 @@ const buildExperience = (node) => {
 
 const buildCompetence = (node) => {
     const ctx = document.getElementById('competence-chart');
-
+    let start =  {
+        beginAtZero: true,
+    }
+    let tickes = { ticks: {
+        callback: function(value, index, ticks) {
+            switch (value) {
+                case 0 : 
+                    return 'Inconnu'
+                case 1 : 
+                    return "Besoin d'un exemple"
+                case 2 : 
+                    return 'Faut que je me documente'
+                case 3 : 
+                    return 'pas de soucis'
+                case 4 : 
+                    return 'Je gère'
+                case 5 : 
+                    return 'Déja fini'
+                default : ''
+            }
+        }
+    }}
     new Chart(ctx, {
         type: 'bar',
         data: {
@@ -195,32 +216,15 @@ const buildCompetence = (node) => {
         }]
         },
         options: {
-        indexAxis: 'y',
+            legend: {
+                display: false
+             },
+        indexAxis: ratio > 1 ? 'x' : 'y',
         scales: {
-            y: {
-                beginAtZero: true,
-               
-            },
-            x : { ticks: {
-                callback: function(value, index, ticks) {
-                    switch (value) {
-                        case 0 : 
-                            return 'Inconnu'
-                        case 1 : 
-                            return "Besoin d'un exemple"
-                        case 2 : 
-                            return 'Faut que je me document '
-                        case 3 : 
-                            return 'pas de soucis'
-                        case 4 : 
-                            return 'Je gère'
-                        case 5 : 
-                            return 'Déja fini'
-                        default : ''
-                    }
-                }
-            }}
+            y: ratio < 1 ? start : null,
+            x : ratio < 1 ? tickes : start, 
         },
+        maintainAspectRatio: false,
         // onClick: function(_,index) {
         //     if (!index[0]) {
         //         return
@@ -440,5 +444,6 @@ experience : {
 
 DATA = JSON.parse(JSON.stringify(DATA).replaceAll('ô', 	'&ocirc;').replaceAll('é', '&eacute').replaceAll('’', '&#146'))
 
+let ratio = window.screen.availHeight / window.screen.availWidth
 onSuccess(DATA)
 //  google.script.run.withSuccessHandler(onSuccess).getData();

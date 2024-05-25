@@ -5,7 +5,7 @@
 :root {
      --backgroud-color: #F3EFE0;/*rgb(22, 22, 22); */
     --container-color: #FEFFEE; /*rgb(19, 16, 19); */
-    --border-color: #721817; /* rgba(155, 119, 14, 0.7);*/
+    --border-color: #4d1211a2; /* rgba(155, 119, 14, 0.7);*/
     --text-color:  black;/* beige;*/
     --bold-color:  black;/* White;*/
     --dote-color:  #721817;/* rgb(250, 231, 255);*/
@@ -168,17 +168,17 @@ font-size: 30px
 }
 
 .container {
-display: flex;
-flex-direction: column;
-flex: 1;
-padding: 6px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 6px;
 }
 
 #client-list {
-overflow: scroll;
-display: flex;
-flex-direction: column;
-flex: 1;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 #client-detail {
@@ -192,46 +192,46 @@ flex: 1;
 }
 
 .separator {
-margin-left: 10px;
-margin-right: 10px;
-background-color: var(--border-color);
-width: 1px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: var(--border-color);
+  width: 1px;
 }
 
 .vertical-separator {
-margin-top: 10px;
-margin-bottom: 10px;
-background-color: var(--border-color);
-height: 1px;
-width: 50%;
-margin-left: auto;
-margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: var(--border-color);
+  height: 1px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .flex-container {
-display: flex;
-justify-content: space-around;
-flex: 1;
-
+  display: flex;
+  justify-content: space-around;
+  flex: 1;
 }
 
 .title {
-display: flex;
-justify-content: center;
-width: 100%;
-font-size: xx-large;
-margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: xx-large;
+  margin-bottom: 24px;
 }
 
 .list-container {
-padding: 10px;
-border-radius: 8px;
-margin-bottom: 4px;
-flex: 1;
-display: flex;
-align-items: center;
-justify-content: center;
-text-align: center;
+  overflow: hidden;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 4px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .detail-container {
@@ -428,4 +428,35 @@ height: 5vh;
   #footer-content {
     width: 90%;
   }
+  .list-container {
+    font-size: 1%;
+  }
+
+  li {
+    font-size: 14px;
+  }
+
+  .dote {
+    width: 30px;
+  }
+  .date {
+    font-size: 13px
+  }
+  .main-content {
+    min-height: 30%;
+  }
+
+  .font-big {
+    font-size: 10px;
+  }
+
+  #dote-container {
+    margin-right: 0;
+  }
+
+  #action-eip-main-content {
+    justify-content: flex-start;
+  }
+
 }
+
