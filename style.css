@@ -11,11 +11,13 @@
     --dote-color:  #721817;/* rgb(250, 231, 255);*/
   }
 
+ 
+
+
 
 body {
     margin : 0;
     overflow: hidden;
-    /* background-image: url('bg.png') ; */
     background-color: var(--backgroud-color);
     background-size: cover;
     color: var(--text-color);
@@ -43,372 +45,387 @@ body {
     justify-content: center;
 }
 
-    .font-1 {
-        font-family: "Montserrat", sans-serif;
-        font-optical-sizing: auto;
-        font-style: normal;
-    }
-    b, strong {
-        color: var(--bold-color);
-        }
-
-    .font-title {
-        font-family: "Freeman", sans-serif;
-
-    }
-    .font-big {
-        font-size: 14pt;
-        padding-bottom: 6px;
+.font-1 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+b, strong {
+    color: var(--bold-color);
     }
 
-    .font-small {
-        font-size: 10pt;
-    }
+.font-title {
+    font-family: "Freeman", sans-serif;
 
-    .font-bigger {
-        font-size: 30pt;
-        padding-bottom: 12px;
-    }
+}
+.font-big {
+    font-size: 14pt;
+    padding-bottom: 6px;
+}
 
-    .font-face {
-        font-family: NotoColorEmojiLimited;
-        unicode-range: U+1F1E6-1F1FF;
-        src: url(https://raw.githack.com/googlefonts/noto-emoji/main/fonts/NotoColorEmoji.ttf);
-      }
+.font-small {
+    font-size: 10pt;
+}
 
-    .is-flex {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+.font-bigger {
+    font-size: 30pt;
+    padding-bottom: 12px;
+}
 
-    .col {
-        flex-direction: column;
-    }
-
-
-  .bg-color {
-    background-color:  var(--container-color); 
+.font-face {
+    font-family: NotoColorEmojiLimited;
+    unicode-range: U+1F1E6-1F1FF;
+    src: url(https://raw.githack.com/googlefonts/noto-emoji/main/fonts/NotoColorEmoji.ttf);
   }
 
-  .border {
-    border: 1px solid var(--border-color);
-  }
-
-
-  #main{
-    padding: 20px;
-    height: 100%;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-  }
-
-  #global-container {
-    display: flex;
+.is-flex {
     flex: 1;
-    margin: 10px;
-    overflow: hidden;
-  }
-
-  #personal-main-container {
-    height: 100%;
-    overflow: hidden;
-  }
-
-  #personal-main-content {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    align-items: center;
-    overflow: hidden;
-  }
-
-
-  .competence-content {
-    padding: 12px;
-  }
-
-  #personal-sub-content {
-    flex: 2;
-    justify-content: space-evenly;
-    height: 75%;
-  }
-
-  #personal-perso {
-    text-align: center;
-  }
-
-    #action-eip-main-content, #eip-main-container {
-        height: 80%;
-        padding: 6px;
-    }
-
-    #action-eip-pict {
-        margin: 24px;
-        height: 20%;
-    }
-
-  #action-personal-pict {
-    height: 80%;
-    margin: auto;
-    border-radius: 4%;
-  }
-
-  #personal-languge {
-    font-size: 30px;
-  }
-
-  #action-personal-job {
-    font-size: 30px
-  }
-
-  .container {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    padding: 6px;
-  }
-
-  #client-list {
-    overflow: scroll;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-  }
-
-  #client-detail {
-      flex: 5;
-      margin-left: 10px;
-      border-left: 1px solid var(--border-color);
-      border-radius: 16px;
-      overflow: scroll;
-      display: flex;
-      flex-direction: column;
-  }
-
-  .separator {
-    margin-left: 10px;
-    margin-right: 10px;
-    background-color: var(--border-color);
-    width: 1px;
-  }
-
-  .vertical-separator {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: var(--border-color);
-    height: 1px;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .flex-container {
-    display: flex;
-    justify-content: space-around;
-    flex: 1;
-
-  }
-
-  .title {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    font-size: xx-large;
-    margin-bottom: 24px;
-  }
-
-  .list-container {
-    padding: 10px;
-    border-radius: 8px;
-    margin-bottom: 4px;
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .detail-container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-
-  .pict-container {
-    flex: 1;
-    height: 80%;
-    display: flex;
-  }
-
-  .list-type {
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .list-container:hover {
-    box-shadow: inset -1px -5px 5px 0px #00000010;
-
-  }
-
-
-  #detail-identity-sub-client {
-    flex: 4;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-
-  #header {
-    margin: 10px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-  }
-  
-  #footer {
-   margin: 10px;
-   margin-bottom: 30px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-  }
-
-  #footer-content {
-    width: 50%;
-    padding: 15px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border-radius: 16px;
-  }
-
-  #header-content {
-    width: 50%;
-    padding: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 16px;
-    font-size: 25px;
-  }
+}
 
-
-  .experience-date {
-    flex: 1;
-    display: flex;
+.col {
     flex-direction: column;
-    align-self: center;
-    align-items: center;
-  }
-
-
-
-  .detail-header {
-    font-family: "Patrick Hand SC", cursive;
-  }
-
-  .selected {
-    box-shadow: inset -1px -5px 5px 0px #00000025;
-  }
-
-  .date {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-  }
-
-
-  .main-content {
-    flex: 1;
-    display: flex;
-    min-height: 35%;
-  }
-
-  .text-center {
-    text-align: left;
-  }
-
-  .loisir-content {
-    display: flex;
-    flex-direction: row;
-    flex: 1;
-  }
-
-  .loisir-dote {
-    width: 20px;
-    background-color:  var(--dote-color);;
-    position: relative;
-    left: -50%;
-    border-radius: 50%;
-    aspect-ratio: 1;
-    object-fit: cover;
-  }
-
-  .size-max {
-    width: 100%;
-  }
-
-  .content {
-    flex : 4;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-
-  img[src=""] {
-    display: none;
 }
 
 
-  #dote-container, #competence-dote-container, .dote-container {
-    object-fit: contain;
-    margin-left: 12px;
-    margin-right: 12px;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    }
+.bg-color {
+background-color:  var(--container-color); 
+}
 
-    #competence-icon-container {
-        height: 100%;
-    }
+.border {
+border: 1px solid var(--border-color);
+}
+
+
+#main{
+padding: 20px;
+height: 100%;
+overflow: hidden;
+display: flex;
+flex-direction: column;
+}
+
+#global-container {
+display: flex;
+flex: 1;
+margin: 10px;
+overflow: hidden;
+}
+
+#personal-main-container {
+height: 100%;
+overflow: hidden;
+}
+
+#personal-main-content {
+flex: 1;
+display: flex;
+flex-direction: row;
+height: 100%;
+align-items: center;
+overflow: hidden;
+}
+
+
+.competence-content {
+padding: 12px;
+}
+
+#personal-sub-content {
+flex: 2;
+justify-content: space-evenly;
+height: 75%;
+}
+
+#personal-perso {
+text-align: center;
+}
+
+#action-eip-main-content, #eip-main-container {
+    height: 80%;
+    padding: 6px;
+}
+
+#action-eip-pict {
+    margin: 24px;
+    height: 20%;
+}
+
+#action-personal-pict {
+height: 80%;
+margin: auto;
+border-radius: 4%;
+}
+
+#personal-languge {
+font-size: 30px;
+}
+
+#action-personal-job {
+font-size: 30px
+}
+
+.container {
+display: flex;
+flex-direction: column;
+flex: 1;
+padding: 6px;
+}
+
+#client-list {
+overflow: scroll;
+display: flex;
+flex-direction: column;
+flex: 1;
+}
+
+#client-detail {
+  flex: 5;
+  margin-left: 10px;
+  border-left: 1px solid var(--border-color);
+  border-radius: 16px;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+}
+
+.separator {
+margin-left: 10px;
+margin-right: 10px;
+background-color: var(--border-color);
+width: 1px;
+}
+
+.vertical-separator {
+margin-top: 10px;
+margin-bottom: 10px;
+background-color: var(--border-color);
+height: 1px;
+width: 50%;
+margin-left: auto;
+margin-right: auto;
+}
+
+.flex-container {
+display: flex;
+justify-content: space-around;
+flex: 1;
+
+}
+
+.title {
+display: flex;
+justify-content: center;
+width: 100%;
+font-size: xx-large;
+margin-bottom: 24px;
+}
+
+.list-container {
+padding: 10px;
+border-radius: 8px;
+margin-bottom: 4px;
+flex: 1;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+
+.detail-container {
+flex: 1;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+}
+
+.pict-container {
+flex: 1;
+height: 80%;
+display: flex;
+}
+
+.list-type {
+display: flex;
+flex: 1;
+justify-content: center;
+align-items: center;
+}
+
+.list-container:hover {
+box-shadow: inset -1px -5px 5px 0px #00000010;
+
+}
+
+
+#detail-identity-sub-client {
+flex: 4;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+}
+
+#header {
+margin: 10px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+#footer {
+margin: 10px;
+margin-bottom: 30px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+#footer-content {
+width: 50%;
+padding: 15px;
+display: flex;
+justify-content: space-around;
+align-items: center;
+border-radius: 16px;
+}
+
+#header-content {
+width: 50%;
+padding: 15px;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 16px;
+font-size: 25px;
+}
+
+
+.experience-date {
+flex: 1;
+display: flex;
+flex-direction: column;
+align-self: center;
+align-items: center;
+}
+
+
+
+.detail-header {
+font-family: "Patrick Hand SC", cursive;
+}
+
+.selected {
+box-shadow: inset -1px -5px 5px 0px #00000025;
+}
+
+.date {
+display: flex;
+justify-content: center;
+align-items: center;
+flex: 1;
+}
+
+
+.main-content {
+flex: 1;
+display: flex;
+min-height: 35%;
+}
+
+.text-center {
+text-align: left;
+}
+
+.loisir-content {
+display: flex;
+flex-direction: row;
+flex: 1;
+}
+
+.loisir-dote {
+width: 20px;
+background-color:  var(--dote-color);;
+position: relative;
+left: -50%;
+border-radius: 50%;
+aspect-ratio: 1;
+object-fit: cover;
+}
+
+.size-max {
+width: 100%;
+}
+
+.content {
+flex : 4;
+display: flex;
+justify-content: center;
+flex-direction: column;
+}
+
+img[src=""] {
+display: none;
+}
+
+
+#dote-container, #competence-dote-container, .dote-container {
+object-fit: contain;
+margin-left: 12px;
+margin-right: 12px;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+#competence-icon-container {
+    height: 100%;
+}
 
 #line {
-    background-color: var(--dote-color);
-    height: 100%;
-    width: 1px;
+background-color: var(--dote-color);
+height: 100%;
+width: 1px;
+}
+
+.dote {
+width: 40px;
+background-color:  var(--dote-color);;
+position: relative;
+left: -50%;
+border-radius: 50%;
+aspect-ratio: 1;
+object-fit: cover;
+}
+
+.img-link {
+margin: 6px;
+height: 5vh;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.hide {
+    display : none
+}
+
+@media only screen and (max-width: 600px) {
+  .pict-container {
+    height: 10%;
+  }
+  .title {
+    font-size:x-large;
   }
 
-  .dote {
-    width: 40px;
-    background-color:  var(--dote-color);;
-    position: relative;
-    left: -50%;
-    border-radius: 50%;
-    aspect-ratio: 1;
-    object-fit: cover;
+  #personal-main-content {
+    flex-direction: column;
   }
-
-  .img-link {
-    margin: 6px;
-    height: 5vh;
-    }
-
-    .footer-contact {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .hide {
-        display : none
-    }
-    
+  #footer-content {
+    width: 90%;
+  }
+}
