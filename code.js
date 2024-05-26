@@ -220,10 +220,6 @@ const buildCompetence = (node) => {
              },
         indexAxis: ratio > 1 ? 'x' : 'y',
         scales: {
-<<<<<<< HEAD
-            y: ratio < 1 ? start : null,
-            x : ratio < 1 ? tickes : start, 
-=======
             y: {
                 beginAtZero: true,
                
@@ -248,7 +244,6 @@ const buildCompetence = (node) => {
                     }
                 }
             }}
->>>>>>> parent of 9b5cca4 (set new color)
         },
         maintainAspectRatio: false,
         // onClick: function(_,index) {
@@ -478,15 +473,9 @@ experience : {
     eip : {
         title : 'EIP',
         description : "L'Epitech Inovative Project, c'est le projet de fin d'étude à Epitech<br>De la 3e à la 5e année les groupe de 4 à 10 étudiants créent leur project et le poussent jusqu'a une hypothetique commercialisation.<br><br><br>",
-<<<<<<< HEAD
-        dedal_description : "J'ai eu la chance d'être pendent 2 ans le responsable du groupe DEDAL, avec lequel nous sommes années jusqu'en finale national pour présenter notre project d'application mobile simplifiant les visites touristiques.<br><br>Accéder au site :",
-        // image : 'https://dedal-showcasewebsite.vercel.app/images/logo-Dedal.png',
-        // showcase : 'https://dedal-showcasewebsite.vercel.app/'
-=======
         dedal_description : "J'ai eu la chance d'être pendent 2 ans le responsable du groupe DEDAL, avec lequel nous sommes années jusqu'en finale national pour présenter notre project d'application mobile simplifiant les visites touristiques.<br>",
         image : 'https://dedal-showcasewebsite.vercel.app/images/logo-Dedal.png',
         showcase : 'https://dedal-showcasewebsite.vercel.app/'
->>>>>>> parent of 9b5cca4 (set new color)
     }
 
 }
