@@ -240,7 +240,7 @@ const buildEip = () => {
     document.getElementById('action-eip-description').innerHTML = DATA.eip.description
     document.getElementById('action-eip-description-teck').innerHTML = DATA.eip.dedal_description
     document.getElementById('action-eip-pict').src = DATA.eip.image
-    document.getElementById('action-eip-pict').addEventListener('click', ()=>window.open(DATA.eip.showcase))
+    // document.getElementById('action-eip-pict').addEventListener('click', ()=>window.open(DATA.eip.showcase))
 }
 
 
