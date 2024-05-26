@@ -211,7 +211,8 @@ const buildCompetence = (node) => {
         datasets: [{
             label: 'Connaissance global / 5',
             data: DATA.competence.content.map((elem) => elem.value),
-            borderWidth: 2
+            borderWidth: 2,
+            backgroundColor : DATA.competence.content.map((elem) => elem.color ?? 'blue'),
         }]
         },
         options: {
@@ -220,30 +221,8 @@ const buildCompetence = (node) => {
              },
         indexAxis: ratio > 1 ? 'x' : 'y',
         scales: {
-            y: {
-                beginAtZero: true,
-               
-            },
-            x : { ticks: {
-                // Include a dollar sign in the ticks
-                callback: function(value, index, ticks) {
-                    switch (value) {
-                        case 0 : 
-                            return 'Inconnu'
-                        case 1 : 
-                            return "Besoin d'un exemple"
-                        case 2 : 
-                            return 'Faut que je me document '
-                        case 3 : 
-                            return 'pas de soucis'
-                        case 4 : 
-                            return 'Je gère'
-                        case 5 : 
-                            return 'Déja fini'
-                        default : ''
-                    }
-                }
-            }}
+            y: ratio < 1 ? start : null,
+            x : ratio < 1 ? tickes : start, 
         },
         maintainAspectRatio: false,
         // onClick: function(_,index) {
@@ -260,7 +239,7 @@ const buildCompetence = (node) => {
 const buildEip = () => {
     document.getElementById('action-eip-description').innerHTML = DATA.eip.description
     document.getElementById('action-eip-description-teck').innerHTML = DATA.eip.dedal_description
-    // document.getElementById('action-eip-pict').src = DATA.eip.image
+    document.getElementById('action-eip-pict').src = DATA.eip.image
     // document.getElementById('action-eip-pict').addEventListener('click', ()=>window.open(DATA.eip.showcase))
 }
 
@@ -419,6 +398,7 @@ experience : {
             {
                 name : 'HTML/CSS',
                 value : '4',
+                color : 'rgba(47, 106, 241, 0.2)',
                 graph : {
                     values : ['web', 'animation', 'responive', 'autonomie'],
                     keys : ['100', '20', '80', '100'] 
@@ -427,6 +407,7 @@ experience : {
             {
                 name : 'JavaScript',
                 value : '5',
+                color : 'rgba(247, 224, 41, 0.5)',
                 graph : {
                     values : ['web', 'animation', 'responive', 'autonomie'],
                     keys : ['100', '20', '80', '100'] 
@@ -435,6 +416,7 @@ experience : {
             {
                 name : 'React Native',
                 value : '4',
+                color : 'rgba(103, 218, 251, 0.5)',
                 graph : {
                     values : ['web', 'animation', 'responive', 'autonomie'],
                     keys : ['100', '20', '80', '100'] 
@@ -442,6 +424,7 @@ experience : {
             },  {
                 name : 'Flutter',
                 value : '5',
+                color : 'rgba(89, 199, 248, 0.5)',
                 graph : {
                     values : ['web', 'animation', 'responive', 'autonomie'],
                     keys : ['100', '20', '80', '100'] 
@@ -449,6 +432,7 @@ experience : {
             },  {
                 name : 'Python',
                 value : '5',
+                color: 'rgba(89, 199, 248, 0.5)',
                 graph : {
                     values : ['web', 'animation', 'responive', 'autonomie'],
                     keys : ['100', '20', '80', '100'] 
@@ -456,6 +440,7 @@ experience : {
             },  {
                 name : 'C',
                 value : '4',
+                color : 'rgba(62, 117, 164, 0.5)',
                 graph : {
                     values : ['web', 'animation', 'responive', 'autonomie'],
                     keys : ['100', '20', '80', '100'] 
@@ -463,6 +448,7 @@ experience : {
             },  {
                 name : 'C++',
                 value : '3',
+                color : 'rgba(105, 157, 211, 0.5)',
                 graph : {
                     values : ['web', 'animation', 'responive', 'autonomie'],
                     keys : ['100', '20', '80', '100'] 
@@ -473,7 +459,7 @@ experience : {
     eip : {
         title : 'EIP',
         description : "L'Epitech Inovative Project, c'est le projet de fin d'étude à Epitech<br>De la 3e à la 5e année les groupe de 4 à 10 étudiants créent leur project et le poussent jusqu'a une hypothetique commercialisation.<br><br><br>",
-        dedal_description : "J'ai eu la chance d'être pendent 2 ans le responsable du groupe DEDAL, avec lequel nous sommes années jusqu'en finale national pour présenter notre project d'application mobile simplifiant les visites touristiques.<br>",
+        dedal_description : "J'ai eu la chance d'être pendent 2 ans le responsable du groupe DEDAL, avec lequel nous sommes années jusqu'en finale national pour présenter notre project d'application mobile simplifiant les visites touristiques.<br><br>Accéder au site :",
         image : 'https://dedal-showcasewebsite.vercel.app/images/logo-Dedal.png',
         showcase : 'https://dedal-showcasewebsite.vercel.app/'
     }

@@ -3,13 +3,17 @@
 
 
 :root {
-    --backgroud-color: rgb(22, 22, 22);
-    --container-color: rgb(19, 16, 19);
-    --border-color: rgba(155, 119, 14, 0.7);
-    --text-color: beige;
-    --bold-color: White;
-    --dote-color: rgb(250, 231, 255);
+     --backgroud-color: #F3EFE0;/*rgb(22, 22, 22); */
+    --container-color: #FEFFEE; /*rgb(19, 16, 19); */
+    --border-color: #4d1211a2; /* rgba(155, 119, 14, 0.7);*/
+    --text-color:  black;/* beige;*/
+    --bold-color:  black;/* White;*/
+    --dote-color:  #721817;/* rgb(250, 231, 255);*/
   }
+
+ 
+
+
 
 body {
     margin : 0;
@@ -41,22 +45,13 @@ body {
     justify-content: center;
 }
 
-    .font-1 {
-        font-family: "Montserrat", sans-serif;
-        font-optical-sizing: auto;
-        font-style: normal;
-    }
-    b, strong {
-        color: white;
-        }
-
-    .font-title {
-        font-family: "Freeman", sans-serif;
-
-    }
-    .font-big {
-        font-size: 14pt;
-        padding-bottom: 6px;
+.font-1 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+b, strong {
+    color: var(--bold-color);
     }
 
 .font-title {
@@ -85,194 +80,10 @@ body {
 
 .is-flex {
     flex: 1;
-    margin: 10px;
-    overflow: hidden;
-  }
-
-  #personal-main-container {
-    height: 100%;
-    overflow: hidden;
-  }
-
-  #personal-main-content {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    align-items: center;
-    overflow: hidden;
-  }
-
-
-  .competence-content {
-    padding: 12px;
-  }
-
-  #personal-sub-content {
-    flex: 2;
-    justify-content: space-evenly;
-    height: 75%;
-  }
-
-  #personal-perso {
-    text-align: center;
-  }
-
-    #action-eip-main-content, #eip-main-container {
-        height: 80%;
-        padding: 6px;
-    }
-
-    #action-eip-pict {
-        margin: 24px;
-        height: 20%;
-    }
-
-  #action-personal-pict {
-    height: 80%;
-    margin: auto;
-    border-radius: 4%;
-  }
-
-  #personal-languge {
-    font-size: 30px;
-  }
-
-  #action-personal-job {
-    font-size: 30px
-  }
-
-  .container {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    padding: 6px;
-  }
-
-  #client-list {
-    overflow: scroll;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-  }
-
-  #client-detail {
-      flex: 4;
-      margin-left: 10px;
-      border-left: 1px solid var(--border-color);
-      border-radius: 4px;
-      overflow: scroll;
-      display: flex;
-      flex-direction: column;
-  }
-
-  .separator {
-    margin-left: 10px;
-    margin-right: 10px;
-    background-color: var(--border-color);
-    width: 1px;
-  }
-
-  .vertical-separator {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: var(--border-color);
-    height: 1px;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .flex-container {
-    display: flex;
-    justify-content: space-around;
-    flex: 1;
-
-  }
-
-  .title {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    font-size: xx-large;
-    margin-bottom: 24px;
-  }
-
-  .list-container {
-    padding: 10px;
-    border-radius: 4px;
-    margin-bottom: 4px;
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .detail-container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-
-  .pict-container {
-    flex: 1;
-    height: 80%;
-    display: flex;
-  }
-
-  .list-type {
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .list-container:hover {
-    box-shadow: inset -1px -5px 5px 0px #00000010;
-
-  }
-
-
-  #detail-identity-sub-client {
-    flex: 4;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-
-  #header {
-    margin: 10px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-  }
-  
-  #footer {
-   margin: 10px;
-   margin-bottom: 30px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-  }
-
-  #footer-content {
-    padding: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 16px;
-  }
-
-  #header-content {
-    padding: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 16px;
-    font-size: 50px;
-  }
+}
 
 .col {
     flex-direction: column;
@@ -646,6 +457,7 @@ height: 5vh;
   #action-eip-main-content {
     justify-content: flex-start;
   }
+
 
 
 }
