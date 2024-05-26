@@ -239,7 +239,7 @@ const buildCompetence = (node) => {
 const buildEip = () => {
     document.getElementById('action-eip-description').innerHTML = DATA.eip.description
     document.getElementById('action-eip-description-teck').innerHTML = DATA.eip.dedal_description
-    document.getElementById('action-eip-pict').src = DATA.eip.image
+    // document.getElementById('action-eip-pict').src = DATA.eip.image
     // document.getElementById('action-eip-pict').addEventListener('click', ()=>window.open(DATA.eip.showcase))
 }
 
@@ -460,8 +460,8 @@ experience : {
         title : 'EIP',
         description : "L'Epitech Inovative Project, c'est le projet de fin d'étude à Epitech<br>De la 3e à la 5e année les groupe de 4 à 10 étudiants créent leur project et le poussent jusqu'a une hypothetique commercialisation.<br><br><br>",
         dedal_description : "J'ai eu la chance d'être pendent 2 ans le responsable du groupe DEDAL, avec lequel nous sommes années jusqu'en finale national pour présenter notre project d'application mobile simplifiant les visites touristiques.<br><br>Accéder au site :",
-        image : 'https://dedal-showcasewebsite.vercel.app/images/logo-Dedal.png',
-        showcase : 'https://dedal-showcasewebsite.vercel.app/'
+        // image : 'https://dedal-showcasewebsite.vercel.app/images/logo-Dedal.png',
+        // showcase : 'https://dedal-showcasewebsite.vercel.app/'
     }
 
 }
