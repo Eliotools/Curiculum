@@ -3,12 +3,12 @@
 
 
 :root {
-     --backgroud-color: #F3EFE0;/*rgb(22, 22, 22); */
-    --container-color: #FEFFEE; /*rgb(19, 16, 19); */
-    --border-color: #4d1211a2; /* rgba(155, 119, 14, 0.7);*/
-    --text-color:  black;/* beige;*/
-    --bold-color:  black;/* White;*/
-    --dote-color:  #721817;/* rgb(250, 231, 255);*/
+     --backgroud-color: white;
+    --container-color: grey; 
+    --border-color: black;
+    --text-color:  black;
+    --bold-color:  black;
+    --dote-color:  red
   }
 
  
