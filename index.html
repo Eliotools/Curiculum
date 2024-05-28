@@ -1,142 +1,117 @@
-<html>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  <head ;content="text/html; charset=UTF-8">
-    <base target="_top">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet" />
 
-
-  </head>
-  <body>
-    <div id="main" class="font-1">
-        <div id="modal" style="display: none;" class="hide" onclick="triggerModal()">
-            <div id="modal-content"  >
-                <canvas id="modal-graph"></canvas>
+    <title>Eliot MARTIN</title>
+</head>
+<body>
+    <div class="main-content">
+        <div id="name" class="font-big">ELIOT MARTIN</div>
+        <div id="sec-nav" style="display: none;">
+            <div class="nav-item" id="action-nav-info">INFOS</div>
+            <div class="nav-item" id="action-nav-formation">FORMATION & DÎPLOMES</div>
+            <div class="nav-item" id="action-nav-experience">EXPERIENCE</div>
+            <div class="nav-item" id="action-nav-loisir">LOISIR</div>
+            <div class="nav-item">COMPETENCE</div>
+            <div class="nav-item">EIP</div>
+        </div>
+        <div id="content-info">
+            <img id="pict-container"  src="asset/profil.jpg" alt="profil-pict">
+            <div id="info">
+                <div id="job">
+                    <li><b>Developpeur</b></li>
+                    <li><b>Scrum Master</b></li>
+                    <li><b>Project Owner</b></li>
+                </div>
+                <div id="birthday">
+                    23/01/2001
+                </div>
+                <div id="dimploma">
+                    Bac +5
+                </div>
+            </div>
+            <div id="nav">
+                <div class="nav-item" id="action-nav-info">INFOS</div>
+                <div class="nav-item" id="action-nav-formation">FORMATION & DÎPLOMES</div>
+                <div class="nav-item" id="action-nav-experience">EXPERIENCE</div>
+                <div class="nav-item" id="action-nav-loisir">LOISIR</div>
+                <div class="nav-item">COMPETENCE</div>
+                <div class="nav-item">EIP</div>
+            </div>
+            <div id="footer">
+                <div id="link">
+                    <img class="footer-link" src="asset/github.png" alt="github">
+                    <img class="footer-link" src="asset/linkedin.png" alt="linkeding">
+                </div>
+                <div id="contact">
+                    <div class="contact-info">+33 6 12 96 53 98</div>
+                    <div class="contact-info">eliot.martin@hotmail.fr</div>
+                </div>
             </div>
         </div>
-        <div id="header">
-            <div id="header-content" class="bg-color border font-title">ELIOT MARTIN</div>
-        </div>
-        <div id="global-container">
-            <div id="client-list" >
-                <div id="action-list-container" class="hide list-container bg-color border">
-                    <div id="list-name" class="font-1">list-name</div>
+        <div id="content-formation" style="display: none;">
+            <div id="action-formation-list">
+                <div id="formation-container">
+                    <div id="formation-item-date" class="text-small" ></div>
+                    <div class="dote-container">
+                        <div class="line"></div>
+                        <img class="dote" id="formation-dote"></img>
+                    </div>
+                    <div id="formation-item-info" style="flex: 5;">
+                        <div id="formation-item-name" class="semi-bold"></div>
+                        <div id="formation-item-desc" class="text-small">
+                        </div>
+                    </div>
                 </div>
             </div>
-     
-
-            
-            <div id="client-detail" class="bg-color border">
-                <!-- personal -->
-                <div id="personal-main-container" class="container">
-                    <div id="action-personal-title" class="title font-title">{TITLE}</div>
-                    <div id="personal-main-content">
-                        <div class="pict-container">
-                            <img id="action-personal-pict"></img>
-                        </div>
-                        <div id="personal-sub-content" class="is-flex col">
-                            <div id="personal-perso">
-                                <div id="action-personal-name" class="font-bigger"></div>
-                                <div id="action-personal-birthday"></div>
-                                <div id="action-personal-study"></div>
-                            </div>
-                                <div id="action-personal-job" class="is-flex col"></div>
-                                <div id="personal-languge" class="is-flex"> 🇬🇧   🇩🇪 </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- formation  -->
-                <div id="formation-main-container" class="container hide">
-                    <div id="action-formation-title" class="title font-title">{TITLE}</div>
-                    <div id="action-formation-main-content" class="main-content" style="display: none;">
-                        <div id="formation-date" class="date">-</div>
-                        <div id="dote-container">
-                            <div id="line"></div>
-                            <img class="dote" id="formation-dote"></img>
-
-
-                        </div>
-                        <div id="formation-content" class="content">
-                            <div id="formation-name" class="font-big">-</div>
-                            <div id="formation-description"></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- experience  -->
-                <div id="experience-main-container" class="container hide">
-                    <div id="action-experience-title" class="title font-title">{TITLE}</div>
-                    <div id="action-experience-main-content" class="main-content" style="display: none;">
-                        <div  class="experience-date">
-                            <div id="experience-date-end" class="font-small"></div>
-                            <div id="experience-date-lenght" class="font-big"></div>
-                            <div id="experience-date-start" class="font-small"></div>
-                        </div>
-                        <div id="dote-container">
-                            <div id="line"></div>
-                            <img class="dote" id="experience-dote" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/HD_transparent_picture.png/1600px-HD_transparent_picture.png"></img>
-                        </div>
-                        <div id="experience-content" class="content">
-                            <div id="experience-name" class="font-big">-</div>
-                            <div id="experience-description"></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- loisir  -->
-                <div id="loisir-main-container" class="container hide">
-                    <div id="action-loisir-title" class="title font-title">{TITLE}</div>
-                    <div class="loisir-content">
-                        <div id="action-loisir-main-content" class="main-content" style="display: none;">
-                            <div  id="is-flex">
-                                <div id="loisir-name" class="font-big"></div>
-                            </div>
-                            <div class="is-flex col">
-                                <div id="loisir-sub-content" class="is-flex size-max">
-                                    <div id="dote-container">
-                                        <div id="line"></div>
-                                        <img class="loisir-dote" id="loisir-dote" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/HD_transparent_picture.png/1600px-HD_transparent_picture.png"></img>
-                                    </div>
-                                    <div id="loisir-content" class="content is-flex size-max">
-                                        <div id="loisir-description" class="font-big size-max text-center">-</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Compétence -->
-                <div id="competence-main-container" class="container hide">
-                    <div id="action-competence-title" class="title font-title">{TITLE}</div>
-                    <div id="action-competence-main-content" class="competence-content is-flex">
-                            <canvas id="competence-chart"></canvas>
-                    </div>
-                </div>
-                <!-- EIP -->
-                <div id="eip-main-container" class="container hide">
-                    <div id="action-eip-title" class="title font-title">{TITLE}</div>
-                    <div id="action-eip-main-content" class="eip-content is-flex col">
-                        <div>
-                            <div id="action-eip-description"></div>
-                            <div id="action-eip-description-teck"></div>
-                        </div>
-                            <img id="action-eip-pict"  class="pict-container"></img>
-                    </div>
-                </div>
-             </div>
         </div>
-        <div id="footer">
-            <div id="footer-content" class="bg-color border">
-                <div class="footer-contact">
-                    <div id="action-personal-phone"></div>
-                    <a id="action-personal-email" ></a>
+        <div id="content-experience" style="display: none;">
+            <div id="action-experience-list">
+                <div id="experience-container">
+                    <div id="experience-item-date" class="text-small" >
+                        <div id="experience-item-date-start"  ></div>
+                        <div id="experience-item-date-lenght" class="text-very-small" ></div>
+                        <div id="experience-item-date-end"  ></div>
+
+                    </div>
+                    <div class="dote-container">
+                        <div class="line"></div>
+                        <img class="dote" id="experience-dote"></img>
+                    </div>
+                    <div id="experience-item-info" style="flex: 5;">
+                        <div id="experience-item-name" class="semi-bold">Epitech Lille</div>
+                        <div id="experience-item-desc" class="text-small">
+                        </div>
+                    </div>
                 </div>
-                    <img class="img-link" src="asset/github.png" alt="github.png" onclick="window.open('https://github.com/Eliotools')">
-                    <img class="img-link" src="asset/linkedin.png" alt="linkedin.png" onclick="window.open('https://www.linkedin.com/in/eliot-martin-9599401b1/')">
             </div>
         </div>
-  </body>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-  <script src="code.js"></script>
-
+        <div id="content-loisir" style="display: none;">
+            <div id="action-loisir-list">
+                <div id="loisir-container">
+                    <div id="loisir-item" class="semi-bold">Pour me defouler</div>
+                    <div id="loisir-item">
+                        <li>Natation</li>
+                        <li>Skate</li>
+                        <li>Escalade</li>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div id="loisir-container">
+                    <div id="loisir-item">
+                        <li>Lecture: LoveCraft</li>
+                        <li>Lego</li>
+                        <li>Magic the Gathering</li>
+                    </div>
+                    <div id="loisir-item" class="semi-bold">Pour me reposer</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="main.js"></script>
 
 </html>
