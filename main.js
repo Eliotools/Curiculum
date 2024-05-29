@@ -22,8 +22,8 @@ const redirect = {
     "action-nav-competence" : (node) => node.addEventListener('click', () => switchContent('content-competence', node)),
     "action-formation-list" : (node) => buildFormation(node),
     "action-experience-list" : (node) => buildExperience(node),
-    "action-competence-chart" : (node) => buildCompetence(node),
     "action-eip-content" : (node) => buildEip(),
+    "action-competence-chart" : (node) => buildCompetence(node),
 };
 
 const buildEip = () => {
@@ -215,7 +215,7 @@ data = {
             },{
                 "dateStart" : "09/20",
                 "dateEnd" : "12/20",
-                "name" : "Sigmatel",
+                "name" : "Sygmatel",
                 "lenght" :"4 mois",
                 "type" : "Stage",
                 "desc" : ["Creation d'une CVteck", "Application windows" ,"<b>Python"],
@@ -240,7 +240,7 @@ data = {
             {
                 "dateStart" : "07/17",
                 "dateEnd" : "08/17",
-                "name" : "Sigmatel",
+                "name" : "Sygmatel",
                 "lenght" :"1 mois",
                 "type" : "Interim",
                 "desc" : ["Job d'été", "Électricien", "Instalisation éélctrique dans un immeuble, "],

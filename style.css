@@ -41,13 +41,13 @@ body {
 
 .main-content {
     background-color: white;
-    height: 100VH;
+    height: 95VH;
     width: 80%;
     margin: 0 auto;
     padding: 0 8px 0 8px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
