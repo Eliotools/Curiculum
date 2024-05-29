@@ -14,14 +14,93 @@ const changeChildsId = (node, suffix, filter) => {
 
 
 const redirect = {
-    "action-nav-info" : (node) => node.addEventListener('click', () => switchContent('content-info')),
-    "action-nav-formation" : (node) => node.addEventListener('click', () => switchContent('content-formation')),
-    "action-nav-experience" : (node) => node.addEventListener('click', () => switchContent('content-experience')),
-    "action-nav-loisir" : (node) => node.addEventListener('click', () => switchContent('content-loisir')),
+    "action-nav-info" : (node) => node.addEventListener('click', () => switchContent('content-info', node)),
+    "action-nav-formation" : (node) => node.addEventListener('click', () => switchContent('content-formation', node)),
+    "action-nav-experience" : (node) => node.addEventListener('click', () => switchContent('content-experience', node)),
+    "action-nav-loisir" : (node) => node.addEventListener('click', () => switchContent('content-loisir', node)),
+    "action-nav-eip" : (node) => node.addEventListener('click', () => switchContent('content-eip', node)),
+    "action-nav-competence" : (node) => node.addEventListener('click', () => switchContent('content-competence', node)),
     "action-formation-list" : (node) => buildFormation(node),
     "action-experience-list" : (node) => buildExperience(node),
+    "action-competence-chart" : (node) => buildCompetence(node),
+    "action-eip-content" : (node) => buildEip(),
 };
 
+const buildEip = () => {
+    document.getElementById('eip-pict').addEventListener('click', () => window.open(data.eip.showcase))
+    document.getElementById('eip-pict').src = data.eip.image
+    document.getElementById('eip-desc').innerHTML = data.eip.description
+    document.getElementById('eip-dedal').innerHTML = data.eip.dedal_description
+}
+
+const buildCompetence = (node) => {
+    let ratio = window.screen.availWidth < 600
+    let start =  {
+        beginAtZero: true,
+    }
+    let tickes = { ticks: {
+        callback: function(value, index, ticks) {
+            switch (value) {
+                case 0 : 
+                    return 'Inconnu'
+                case 1 : 
+                    return "Besoin d'un exemple"
+                case 2 : 
+                    return 'Faut que je me documente'
+                case 3 : 
+                    return 'pas de soucis'
+                case 4 : 
+                    return 'Je gère'
+                case 5 : 
+                    return 'Déja fini'
+                default : ''
+            }
+        }
+    }}
+    new Chart(node, {
+        type: 'bar',
+        data: {
+        labels: data.competence.map((elem) => elem.name),
+        datasets: [{
+            label: 'Connaissance global / 5',
+            data: data.competence.map((elem) => elem.value),
+            borderWidth: 0,
+            backgroundColor : data.competence.map((elem) => 'grey'),
+        }]
+        },
+        options: {
+            events: [],
+            plugins: {
+                legend: {
+                    display: false
+                },
+            },
+            indexAxis: ratio ? 'x' : 'y',
+            scales: {
+                x: {
+                    ticks : !ratio ? start : start,
+                    grid: {
+                    display: false
+                    }
+                },
+                y: {
+                    ticks : !ratio ? tickes : start, 
+                    grid: {
+                    display: false
+                    }
+                },
+            },
+            maintainAspectRatio: false,
+        // onClick: function(_,index) {
+        //     if (!index[0]) {
+        //         return
+        //     }
+        //     triggerModal(index[0].index)
+        // }
+        }
+    });
+    return
+}
 
 const buildFormation = (node) => {
     let card = document.getElementById('formation-container')
@@ -67,8 +146,11 @@ const buildExperience = (node) => {
     card.style.display = 'none'
 }
 
-switchContent = (type) => {
-    document.getElementById('sec-nav').style.display = type == 'content-info' ? 'none' : 'flex'
+switchContent = (type, node) => {
+    document.querySelectorAll('[selected]').forEach((elem) => elem.removeAttribute('selected'))
+    document.querySelectorAll(`[id=${node.id}]`).forEach((elem) => elem.setAttribute('selected', true))
+    node.setAttribute('selected', true)
+    document.getElementById('sec-nav').style.display = type == 'content-info' ? 'none' : ratio ? 'grid' : 'flex'
     document.querySelectorAll("[id^=content-]").forEach ((node) => node.style.display = node.id == type ? 'flex' : 'none')
 }
 
@@ -161,12 +243,79 @@ data = {
                 "name" : "Sigmatel",
                 "lenght" :"1 mois",
                 "type" : "Interim",
-                "desc" : ["Job d'été", "Ã‰lectricien", "Instalisation éélctrique dans un immeuble, "],
+                "desc" : ["Job d'été", "Électricien", "Instalisation éélctrique dans un immeuble, "],
                 "image" : "https://www.sygmatel.fr/wp-content/uploads/2021/04/Sygmatel-LOW.jpg"
             }
-    ]
+    ],
+    competence : 
+         [
+            {
+                name : 'HTML/CSS',
+                value : '4',
+                color : 'rgba(47, 106, 241, 0.2)',
+                graph : {
+                    values : ['web', 'animation', 'responive', 'autonomie'],
+                    keys : ['100', '20', '80', '100'] 
+                },
+            }, {
+                name : 'JavaScript',
+                value : '5',
+                color : 'rgba(247, 224, 41, 0.5)',
+                graph : {
+                    values : ['web', 'animation', 'responive', 'autonomie'],
+                    keys : ['100', '20', '80', '100'] 
+                },
+            }, {
+                name : 'React Native',
+                value : '4',
+                color : 'rgba(103, 218, 251, 0.5)',
+                graph : {
+                    values : ['web', 'animation', 'responive', 'autonomie'],
+                    keys : ['100', '20', '80', '100'] 
+                },
+            },  {
+                name : 'Flutter',
+                value : '5',
+                color : 'rgba(89, 199, 248, 0.5)',
+                graph : {
+                    values : ['web', 'animation', 'responive', 'autonomie'],
+                    keys : ['100', '20', '80', '100'] 
+                },
+            },  {
+                name : 'Python',
+                value : '5',
+                color: 'rgba(89, 199, 248, 0.5)',
+                graph : {
+                    values : ['web', 'animation', 'responive', 'autonomie'],
+                    keys : ['100', '20', '80', '100'] 
+                },
+            },  {
+                name : 'C',
+                value : '4',
+                color : 'rgba(62, 117, 164, 0.5)',
+                graph : {
+                    values : ['web', 'animation', 'responive', 'autonomie'],
+                    keys : ['100', '20', '80', '100'] 
+                },
+            },  {
+                name : 'C++',
+                value : '3',
+                color : 'rgba(105, 157, 211, 0.5)',
+                graph : {
+                    values : ['web', 'animation', 'responive', 'autonomie'],
+                    keys : ['100', '20', '80', '100'] 
+                },
+            },
+        ],
+        eip : {
+            description : "L'Epitech Inovative Project, c'est le projet de fin d'étude à Epitech<br>De la 3e à la 5e année les groupe de 4 à 10 étudiants créent leur project et le poussent jusqu'a une hypothetique commercialisation.<br><br><br>",
+            dedal_description : "J'ai eu la chance d'être pendent 2 ans le responsable du groupe DEDAL, avec lequel nous sommes années jusqu'en finale national pour présenter notre project d'application mobile simplifiant les visites touristiques.",
+            image : 'asset/dedal.png',
+            showcase : 'https://dedal-showcasewebsite.vercel.app/'
+        }
 }
 
+let ratio = window.screen.availWidth < 600
 
 document.querySelectorAll("[id^=action]").forEach((node) => {
     if (redirect[node.id]) {

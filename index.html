@@ -11,12 +11,12 @@
     <div class="main-content">
         <div id="name" class="font-big">ELIOT MARTIN</div>
         <div id="sec-nav" style="display: none;">
-            <div class="nav-item" id="action-nav-info">INFOS</div>
+            <div class="nav-item" selected="true" id="action-nav-info">INFOS</div>
             <div class="nav-item" id="action-nav-formation">FORMATION & DÎPLOMES</div>
             <div class="nav-item" id="action-nav-experience">EXPERIENCE</div>
             <div class="nav-item" id="action-nav-loisir">LOISIR</div>
-            <div class="nav-item">COMPETENCE</div>
-            <div class="nav-item">EIP</div>
+            <div class="nav-item" id="action-nav-competence">COMPETENCE</div>
+            <div class="nav-item" id="action-nav-eip">EIP</div>
         </div>
         <div id="content-info">
             <img id="pict-container"  src="asset/profil.jpg" alt="profil-pict">
@@ -34,21 +34,25 @@
                 </div>
             </div>
             <div id="nav">
-                <div class="nav-item" id="action-nav-info">INFOS</div>
+                <div class="nav-item" selected="true" id="action-nav-info">INFOS</div>
                 <div class="nav-item" id="action-nav-formation">FORMATION & DÎPLOMES</div>
                 <div class="nav-item" id="action-nav-experience">EXPERIENCE</div>
                 <div class="nav-item" id="action-nav-loisir">LOISIR</div>
-                <div class="nav-item">COMPETENCE</div>
-                <div class="nav-item">EIP</div>
+                <div class="nav-item" id="action-nav-competence">COMPETENCE</div>
+                <div class="nav-item" id="action-nav-eip">EIP</div>
             </div>
             <div id="footer">
                 <div id="link">
-                    <img class="footer-link" src="asset/github.png" alt="github">
-                    <img class="footer-link" src="asset/linkedin.png" alt="linkeding">
+                    <a class="footer-link" href="https://github.com/Eliotools" target="_blank" >
+                        <img class="footer-link" src="asset/github.png" alt="github" href="https://github.com/Eliotools">
+                    </a>
+                    <a class="footer-link" href="https://www.linkedin.com/in/eliot-martin-9599401b1/" target="_blank">
+                        <img class="footer-link" src="asset/linkedin.png" alt="linkeding">
+                    </a>
                 </div>
                 <div id="contact">
                     <div class="contact-info">+33 6 12 96 53 98</div>
-                    <div class="contact-info">eliot.martin@hotmail.fr</div>
+                    <a class="contact-info" href="mailto:eliot.martin@hotmail.fr">eliot.martin@hotmail.fr</a>
                 </div>
             </div>
         </div>
@@ -90,28 +94,48 @@
             </div>
         </div>
         <div id="content-loisir" style="display: none;">
-            <div id="action-loisir-list">
+            <div id="loisir-list">
                 <div id="loisir-container">
-                    <div id="loisir-item" class="semi-bold">Pour me defouler</div>
-                    <div id="loisir-item">
+                    <div id="loisir-item-title" class="semi-bold">Pour me defouler</div>
+                    <div id="loisir-item-desc" style="align-items:end">
                         <li>Natation</li>
                         <li>Skate</li>
                         <li>Escalade</li>
                     </div>
                 </div>
-                <div class="line"></div>
+                <div class="line">
+                    <div class="dote" style="left: 0;"></div>
+                    <div class="dote" style="left: 0;"></div>
+                </div>
                 <div id="loisir-container">
-                    <div id="loisir-item">
+                    <div id="loisir-item-desc" style="align-items: start;">
                         <li>Lecture: LoveCraft</li>
                         <li>Lego</li>
                         <li>Magic the Gathering</li>
                     </div>
-                    <div id="loisir-item" class="semi-bold">Pour me reposer</div>
+                    <div id="loisir-item-name" class="semi-bold">Pour me reposer</div>
+                </div>
+            </div>
+        </div>
+        <div id="content-competence" style="display: none;">
+            <canvas id="action-competence-chart"></canvas>
+        </div>
+        <div id="content-eip" style="display: none;">
+            <div id="action-eip-content">
+                <div id="eip-text" class="text-small">
+                    <div id="eip-desc"></div>
+                    <div id="eip-dedal"></div>
+                </div>
+                <div class="line mobil-hide" ></div>
+                <div id="eip-pict-content">
+                    <div>Accéder au site : </div>
+                    <img id="eip-pict" src="asset/linkedin.png" alt="dedal-logo">
                 </div>
             </div>
         </div>
     </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="main.js"></script>
 
 </html>
