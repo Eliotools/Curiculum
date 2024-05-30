@@ -15,6 +15,16 @@
     font-size: xx-large;
 }
 
+[last] {
+    position: relative;
+    top: -50%;
+}
+
+[first] {
+    position: relative;
+    top: 25%;
+}
+
 .flex {
     display: flex;
 }
@@ -163,6 +173,8 @@ li {
     cursor: pointer;
 }
 
+
+
 .nav-item:hover {
     box-shadow: 2px 6px 27px -25px #000000 inset;
 }
@@ -220,6 +232,15 @@ li {
 
 .semi-bold {
     font-weight: 500;
+}
+
+#loisir-dote {
+    left: -25%;
+}
+
+#loisir-line {
+height: 50%;
+justify-content: space-between;
 }
 
 .line {

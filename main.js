@@ -108,6 +108,12 @@ const buildFormation = (node) => {
         let newCard = card.cloneNode(true)
         changeChildsId(newCard, '-'+index, 'formation-' )
         node.appendChild(newCard)
+        if (index == 0) {
+        document.getElementById('formation-dote-line-' + index).setAttribute('first' ,null)
+        }
+        if (index == data.formation.length-1) {
+        document.getElementById('formation-dote-line-' + index).setAttribute('last', null)
+        }
         document.getElementById('formation-item-date-' + index).innerHTML = item.date
         document.getElementById('formation-item-name-' + index).innerHTML = item.name
         let list = document.getElementById('formation-item-desc-' + index)
@@ -131,6 +137,12 @@ const buildExperience = (node) => {
         let newCard = card.cloneNode(true)
         changeChildsId(newCard, '-'+index, 'experience-' )
         node.appendChild(newCard)
+        if (index == 0) {
+            document.getElementById('experience-dote-line-' + index).setAttribute('first' ,null)
+            }
+        if (index == data.experience.length-1) {
+            document.getElementById('experience-dote-line-' + index).setAttribute('last', null)
+        }
         document.getElementById('experience-item-date-start-' + index).innerHTML = item.dateStart
         document.getElementById('experience-item-date-lenght-' + index).innerHTML = item.lenght
         document.getElementById('experience-item-date-end-' + index).innerHTML = item.dateEnd
@@ -243,7 +255,7 @@ data = {
                 "name" : "Sygmatel",
                 "lenght" :"1 mois",
                 "type" : "Interim",
-                "desc" : ["Job d'été", "Électricien", "Instalisation éélctrique dans un immeuble, "],
+                "desc" : ["Job d'été", "Électricien", "Instalisation éléctrique dans un immeuble, "],
                 "image" : "https://www.sygmatel.fr/wp-content/uploads/2021/04/Sygmatel-LOW.jpg"
             }
     ],
