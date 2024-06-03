@@ -488,7 +488,8 @@ data_en = {
 let ratio = window.screen.availWidth < 600
 
 
-let local = navigator.language.includes('fr') ? data_fr : data_en
+let data = navigator.language.includes('fr') ? data_fr : data_en
+
 document.querySelectorAll("[id^=action]").forEach((node) => {
     if (redirect[node.id]) {
         redirect[node.id](node)
