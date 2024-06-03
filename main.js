@@ -39,20 +39,20 @@ const buildCompetence = (node) => {
         beginAtZero: true,
     }
     let tickes = { ticks: {
-        callback: function(value, index, ticks) {
+        callback: function(value, _, _) {
             switch (value) {
                 case 0 : 
-                    return 'Inconnu'
+                    return local ? 'Inconnu' : 'Unknown'
                 case 1 : 
-                    return "Besoin d'un exemple"
+                    return local ? "Besoin d'un exemple": "Need an example"
                 case 2 : 
-                    return 'Faut que je me documente'
+                    return local ? 'Faut que je me documente' : 'I need to read up'
                 case 3 : 
-                    return 'pas de soucis'
+                    return local ? 'pas de soucis' : 'no worries'
                 case 4 : 
-                    return 'Je gère'
+                    return local ? 'Je gère' : "I'll manage"
                 case 5 : 
-                    return 'Déja fini'
+                    return local ? 'Déja fini' : 'Already finished'
                 default : ''
             }
         }
@@ -488,8 +488,9 @@ data_en = {
 let ratio = window.screen.availWidth < 600
 
 
-let data = navigator.language.includes('fr') ? data_fr : data_en
-
+let local = navigator.language.includes('fr')
+let data = local ? data_fr : data_en
+return
 document.querySelectorAll("[id^=action]").forEach((node) => {
     if (redirect[node.id]) {
         redirect[node.id](node)
