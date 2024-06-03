@@ -51,8 +51,8 @@ local_en = {
     "eip-get-site": "Go to website : ",
 } 
 
-let data = local ? local_fr : local_en
+let data_local = local ? local_fr : local_en
 
-Object.keys(data).forEach((key) => 
-    document.getElementById(key).innerHTML = data[key]
+Object.keys(data_local).forEach((key) => 
+    document.getElementById(key).innerHTML = data_local[key]
 )
