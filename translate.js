@@ -53,7 +53,6 @@ local_en = {
 
 let data = local ? local_fr : local_en
 
-Object.keys(data).forEach((key) => {
-    console.log(key)
+Object.keys(data).forEach((key) => 
     document.getElementById(key).innerHTML = data[key]
-})
+)
