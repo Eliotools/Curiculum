@@ -9,16 +9,9 @@
 </head>
 <body>
     <div class="main-content">
-        <div id="name" class="font-big">ELIOT MARTIN</div>
-        <div id="sec-nav" style="display: none;">
-            <div class="nav-item" selected="true" id="action-nav-info">INFOS</div>
-            <div class="nav-item" id="action-nav-formation">FORMATION & DÎPLOMES</div>
-            <div class="nav-item" id="action-nav-experience">EXPERIENCE</div>
-            <div class="nav-item" id="action-nav-loisir">LOISIR</div>
-            <div class="nav-item" id="action-nav-competence">COMPETENCE</div>
-            <div class="nav-item" id="action-nav-eip">EIP</div>
-        </div>
-        <div id="content-info">
+  <div id="content-info">
+        <div id="name" class="font-bigger">ELIOT MARTIN</div>
+
             <img id="pict-container"  src="asset/profil.jpg" alt="profil-pict">
             <div id="info">
                 <div id="job">
@@ -56,7 +49,8 @@
                 </div>
             </div>
         </div>
-        <div id="content-formation" style="display: none;">
+        <div id="content-formation">
+          <div id="formation-title" class="font-bigger">FORMATION</div>
             <div id="action-formation-list">
                 <div id="formation-container">
                     <div id="formation-item-date" class="text-small" ></div>
@@ -64,7 +58,7 @@
                         <div id="formation-dote-line" class="line"></div>
                         <img class="dote" id="formation-dote"></img>
                     </div>
-                    <div id="formation-item-info" style="flex: 5;">
+                    <div id="formation-item-info" style="flex: 1;">
                         <div id="formation-item-name" class="semi-bold"></div>
                         <div id="formation-item-desc" class="text-small">
                         </div>
@@ -72,7 +66,8 @@
                 </div>
             </div>
         </div>
-        <div id="content-experience" style="display: none;">
+        <div id="content-experience">
+          <div id="experience-title" class="font-bigger">EXPERIENCE</div>
             <div id="action-experience-list">
                 <div id="experience-container">
                     <div id="experience-item-date" class="text-small" >
@@ -85,7 +80,7 @@
                         <div id="experience-dote-line" class="line"></div>
                         <img class="dote" id="experience-dote"></img>
                     </div>
-                    <div id="experience-item-info" style="flex: 5;">
+                    <div id="experience-item-info" style="flex: 1;">
                         <div id="experience-item-name" class="semi-bold">Epitech Lille</div>
                         <div id="experience-item-desc" class="text-small">
                         </div>
@@ -93,7 +88,8 @@
                 </div>
             </div>
         </div>
-        <div id="content-loisir" style="display: none;">
+        <div id="content-loisir">
+          <div id="loisir-title" class="font-bigger">LOISIR</div>
             <div id="loisir-list">
                 <div id="loisir-container">
                     <div id="loisir-item-title" class="semi-bold">Pour me reposer</div>
@@ -118,7 +114,8 @@
                 </div>
             </div>
         </div>
-        <div id="content-eip" style="display: none;">
+        <div id="content-eip">
+          <div id="eip-title" class="font-bigger">EIP</div>
             <div id="action-eip-content">
                 <div id="eip-text" class="text-small">
                     <div id="eip-desc"></div>
@@ -131,13 +128,15 @@
                 </div>
             </div>
         </div>
-        <div id="content-competence" style="display: none;">
-            <canvas id="action-competence-chart"></canvas>
+        <div id="content-competence">
+          <div id="competences-title" class="font-bigger">COMPETENCES</div>
+          <div id="competence-chart"></div>
         </div>
     </div>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="main.js"></script>
+<script src="competance.js"></script>
 <script src="translate.js"></script>
 
 </html>

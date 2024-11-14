@@ -22,7 +22,7 @@ local_fr = {
     "loisir-item-desc2": "\n<li>Lecture: LoveCraft</li>\n<li>Lego</li>\n<li>Magic the Gathering</li>\n",
     "loisir-item-name": "Pour me defouler",
     "eip-get-site": "Accéder au site : ",
-    "content-competence": "\n<canvas id=\"action-competence-chart\"></canvas>\n",
+    // "content-competence": "\n<canvas id=\"action-competence-chart\"></canvas>\n",
     "eip-get-site" : "Accéder au site :",
 }
 local_en = {

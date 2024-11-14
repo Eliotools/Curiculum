@@ -13,6 +13,8 @@
 .font-big {
     font-family: "Freeman", sans-serif;
     font-size: xx-large;
+    margin-top: 10vh;
+      margin-bottom: 5vh;
 }
 
 [last] {
@@ -35,7 +37,8 @@
 
 .font-bigger {
     font-size: 30pt;
-    padding-bottom: 12px;
+    margin-top: 10vh;
+      margin-bottom: 5vh;
 }
 
 body {
@@ -46,23 +49,22 @@ body {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    position: fixed;
   }
 
 .main-content {
     background-color: white;
-    height: 95VH;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     padding: 0 8px 0 8px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
+
  [id^=content] {
-    height: 80%;
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -73,13 +75,15 @@ body {
 #action-formation-list, #action-experience-list, #action-eip-content {
     height: 100%;
     width: 100%;
-    overflow: scroll;
     display: flex;
     flex-direction: column;
 }
 
+#content-info {
+  height: 100VH;
+}
 #action-eip-content {
-    overflow: hidden;
+  overflow: hidden;
     justify-content: space-evenly;
 }
 #eip-text {
@@ -125,6 +129,7 @@ body {
 
 
 #pict-container {
+    transform: scaleX(-1);
     height: 25vh;
     width: 100%;
     object-fit: cover;
@@ -239,13 +244,12 @@ li {
 }
 
 #loisir-line {
-height: 50%;
 justify-content: space-between;
 }
 
 .line {
+    height: 150px;
     width: 2px;
-    height: 100%;
     background-color: black;
     margin: 0 20px;
     display: flex;

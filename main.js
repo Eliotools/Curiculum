@@ -12,14 +12,16 @@ const changeChildsId = (node, suffix, filter) => {
     }
 }
 
+const scrollToId = (id) => document.getElementById(id).scrollIntoView(true)
+
 
 const redirect = {
     "action-nav-info" : (node) => node.addEventListener('click', () => switchContent('content-info', node)),
-    "action-nav-formation" : (node) => node.addEventListener('click', () => switchContent('content-formation', node)),
-    "action-nav-experience" : (node) => node.addEventListener('click', () => switchContent('content-experience', node)),
-    "action-nav-loisir" : (node) => node.addEventListener('click', () => switchContent('content-loisir', node)),
-    "action-nav-eip" : (node) => node.addEventListener('click', () => switchContent('content-eip', node)),
-    "action-nav-competence" : (node) => node.addEventListener('click', () => switchContent('content-competence', node)),
+    "action-nav-formation" : (node) => node.addEventListener('click', () => document.getElementById('formation-title').scrollIntoView( { behavior: "smooth"})),
+    "action-nav-experience" : (node) => node.addEventListener('click', () => document.getElementById('experience-title').scrollIntoView( { behavior: "smooth"})),
+    "action-nav-loisir" : (node) => node.addEventListener('click', () => document.getElementById('loisir-title').scrollIntoView( { behavior: "smooth"})),
+    "action-nav-eip" : (node) => node.addEventListener('click', () => document.getElementById('eip-title').scrollIntoView( { behavior: "smooth"})),
+    "action-nav-competence" : (node) => node.addEventListener('click', () => document.getElementById('competences-title').scrollIntoView( { behavior: "smooth"})),
     "action-formation-list" : (node) => buildFormation(node),
     "action-experience-list" : (node) => buildExperience(node),
     "action-eip-content" : (node) => buildEip(),
@@ -31,75 +33,6 @@ const buildEip = () => {
     document.getElementById('eip-pict').src = data.eip.image
     document.getElementById('eip-desc').innerHTML = data.eip.description
     document.getElementById('eip-dedal').innerHTML = data.eip.dedal_description
-}
-
-const buildCompetence = (node) => {
-    let ratio = window.screen.availWidth < 600
-    let start =  {
-        beginAtZero: true,
-    }
-    let tickes = { ticks: {
-        callback: function(value, _, _) {
-            switch (value) {
-                case 0 : 
-                    return local ? 'Inconnu' : 'Unknown'
-                case 1 : 
-                    return local ? "Besoin d'un exemple": "Need an example"
-                case 2 : 
-                    return local ? 'Faut que je me documente' : 'I need to read up'
-                case 3 : 
-                    return local ? 'pas de soucis' : 'no worries'
-                case 4 : 
-                    return local ? 'Je gère' : "I'll manage"
-                case 5 : 
-                    return local ? 'Déja fini' : 'Already finished'
-                default : ''
-            }
-        }
-    }}
-    new Chart(node, {
-        type: 'bar',
-        data: {
-        labels: data.competence.map((elem) => elem.name),
-        datasets: [{
-            label: 'Connaissance global / 5',
-            data: data.competence.map((elem) => elem.value),
-            borderWidth: 0,
-            backgroundColor : data.competence.map((elem) => 'grey'),
-        }]
-        },
-        options: {
-            events: [],
-            plugins: {
-                legend: {
-                    display: false
-                },
-            },
-            indexAxis: ratio ? 'x' : 'y',
-            scales: {
-                x: {
-                    ticks : !ratio ? start : start,
-                    grid: {
-                    display: false
-                    }
-                },
-                y: {
-                    ticks : !ratio ? tickes : start, 
-                    grid: {
-                    display: false
-                    }
-                },
-            },
-            maintainAspectRatio: false,
-        // onClick: function(_,index) {
-        //     if (!index[0]) {
-        //         return
-        //     }
-        //     triggerModal(index[0].index)
-        // }
-        }
-    });
-    return
 }
 
 const buildFormation = (node) => {
@@ -263,56 +196,63 @@ data_fr = {
          [
             {
                 name : 'HTML/CSS',
-                value : '4',
-                color : 'rgba(47, 106, 241, 0.2)',
+                speed : 0.04,
+                color : 0x2f6af1,
+                pos : 1,
                 graph : {
                     values : ['web', 'animation', 'responive', 'autonomie'],
                     keys : ['100', '20', '80', '100'] 
                 },
             }, {
                 name : 'JavaScript',
-                value : '5',
-                color : 'rgba(247, 224, 41, 0.5)',
+                speed : 0.05,
+                color : 0xf7e029,
+                pos : 2,
                 graph : {
                     values : ['web', 'animation', 'responive', 'autonomie'],
                     keys : ['100', '20', '80', '100'] 
                 },
             }, {
                 name : 'React Native',
-                value : '4',
-                color : 'rgba(103, 218, 251, 0.5)',
+                speed : 0.04,
+                color : 0x67dafb,
+                pos : 3,
                 graph : {
                     values : ['web', 'animation', 'responive', 'autonomie'],
                     keys : ['100', '20', '80', '100'] 
                 },
             },  {
                 name : 'Flutter',
-                value : '5',
-                color : 'rgba(89, 199, 248, 0.5)',
+                speed : 0.05,
+                color : 0x59c7f8,
+                pos : 4,
                 graph : {
                     values : ['web', 'animation', 'responive', 'autonomie'],
                     keys : ['100', '20', '80', '100'] 
                 },
             },  {
                 name : 'Python',
-                value : '5',
-                color: 'rgba(89, 199, 248, 0.5)',
+                speed : 0.05,
+                color: 0x9c7f8,
+                pos : 5,
                 graph : {
                     values : ['web', 'animation', 'responive', 'autonomie'],
                     keys : ['100', '20', '80', '100'] 
                 },
             },  {
                 name : 'C',
-                value : '4',
-                color : 'rgba(62, 117, 164, 0.5)',
+                speed : 0.04,
+                color : 0x3e75a4,
+                pos : 6,
                 graph : {
                     values : ['web', 'animation', 'responive', 'autonomie'],
                     keys : ['100', '20', '80', '100'] 
                 },
             },  {
                 name : 'C++',
-                value : '3',
-                color : 'rgba(105, 157, 211, 0.5)',
+                speed : 0.03,
+                color : 0x699dd3,
+                pos : 7,
                 graph : {
                     values : ['web', 'animation', 'responive', 'autonomie'],
                     keys : ['100', '20', '80', '100'] 
@@ -320,8 +260,8 @@ data_fr = {
             },
         ],
         eip : {
-            description : "L'Epitech Inovative Project, c'est le projet de fin d'étude à Epitech<br>De la 3e à la 5e année les groupe de 4 à 10 étudiants créent leur project et le poussent jusqu'a une hypothetique commercialisation.<br><br><br>",
-            dedal_description : "J'ai eu la chance d'être pendent 2 ans le responsable du groupe DEDAL, avec lequel nous sommes années jusqu'en finale national pour présenter notre project d'application mobile simplifiant les visites touristiques.",
+            description : "L'Epitech Inovative Project, c'est le projet de fin d'études à Epitech <br>De la 3e à la 5e année, les groupes de 4 à 10 étudiants créent leur projet et le poussent jusqu'à une hypothétique commercialisation.<br><br><br>",
+            dedal_description : "J'ai eu la chance d'être pendant 2 ans le responsable du groupe DEDAL, avec lequel nous sommes allés jusqu'en finale nationale pour présenter notre projet d'application mobile simplifiant les visites touristiques.",
             image : 'asset/dedal.png',
             showcase : 'https://dedal-showcasewebsite.vercel.app/'
         }
