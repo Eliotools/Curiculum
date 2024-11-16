@@ -13,8 +13,7 @@
 .font-big {
     font-family: "Freeman", sans-serif;
     font-size: xx-large;
-    margin-top: 10vh;
-      margin-bottom: 5vh;
+    margin-bottom: 5vh;
 }
 
 [last] {
@@ -368,3 +367,18 @@ justify-content: space-between;
     }
 }
 
+#stars-container {
+  display: flex;
+}
+
+.star {
+  font-size: 30px;
+  color: #d3d3d3;
+  /* Couleur par défaut (vide) */
+  cursor: pointer;
+}
+
+.star.filled {
+  color: #ffd700;
+  /* Couleur pour une étoile pleine */
+}

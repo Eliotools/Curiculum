@@ -197,54 +197,66 @@ data_fr = {
           {
             name : 'HTML',
             image : 'asset/html.png',
+            rate : 5,
           },
           {
             name : 'CSS',
             image : 'asset/css.png',
+            rate : 5
           }
           ,{
             name : 'JavaScript',
             image : 'asset/js.png',
+            rate : 5
           }
           ,{
             name : 'React Native',
             image : 'asset/react.png',
+            rate : 5
 
           }
           ,{
             name : 'Flutter',
             image : 'asset/flutter.png',
+            rate : 5
 
           }
           ,{
             name : 'Python',
             image : 'asset/python.png',
+            rate : 5
           }
           ,{
             name : 'C',
             image : 'asset/c.png',
+            rate : 3
 
           }
           ,{
             name : 'C++',
             image : 'asset/cpp.png',
+            rate : 3
 
           }
           ,{
             name : 'Tailwind',
             image : 'asset/tailwind.png',
+            rate : 3
           },
           ,{
             name : 'Notion',
             image : 'asset/notion.png',
+            rate : 5
           },
           ,{
             name : 'Jira',
             image : 'asset/jira.png',
+            rate : 4
           },
           ,{
             name : 'Github',
             image : 'asset/github.png',
+            rate : 5
           },
         ],
         eip : {

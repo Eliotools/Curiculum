@@ -22,8 +22,8 @@ local_fr = {
     "loisir-item-desc2": "\n<li>Lecture: LoveCraft</li>\n<li>Lego</li>\n<li>Magic the Gathering</li>\n",
     "loisir-item-name": "Pour me defouler",
     "eip-get-site": "Accéder au site : ",
-    // "content-competence": "\n<canvas id=\"action-competence-chart\"></canvas>\n",
     "eip-get-site" : "Accéder au site :",
+    "competence-desc" : "Passez-votre souris sur les icons"
 }
 local_en = {
     "action-nav-info": "INFOS",
@@ -49,6 +49,8 @@ local_en = {
     "loisir-item-desc2": "\n<li>Reading: LoveCraft</li>\n<li>Lego</li>\n<li>Magic the Gathering</li>\n",
     "loisir-item-name": "To let off steam",
     "eip-get-site": "Go to website : ",
+    "competence-desc" : "Wipe your mouse over the icons"
+
 } 
 
 let data_local = local ? local_fr : local_en

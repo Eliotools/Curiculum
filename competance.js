@@ -1,6 +1,17 @@
 function generateRandomNumber(min, max)  {
   return Math.random() * (max - min) + min; 
 }
+
+starFilled = '★'
+starEmpty = '☆'
+
+const setStars = (rate) => {
+  stars =  document.querySelectorAll('.star');
+  stars.forEach((s) => {
+    s.innerText = parseInt(s.getAttribute('data-value')) <= rate ? starFilled : starEmpty
+  })
+}
+
 const { Engine, Render, Runner, Bodies, Composite, Mouse, MouseConstraint, Events } = Matter;
 let shape = []
 const engine = Engine.create();
@@ -64,15 +75,21 @@ const mouse = Mouse.create(render.canvas);
 const mouseConstraint = MouseConstraint.create(engine, {
   mouse: mouse,
   constraint: {
-    stiffness: 0.2
+    stiffness: 1,
+  },
+  render: {
+    visible: true // Masque le trait de la contrainte
   }
 });
+
 Events.on(mouseConstraint, 'mousemove', function(event) {
   const mousePosition = event.mouse.position;
   let res =  shape.find((e) =>Matter.Bounds.contains(e.bounds, mousePosition) )
   if (!res) {
-    document.getElementById('competences-desc').innerText = 'HOVER'
+    document.getElementById('competence-desc').innerText = data_local['competence-desc']
+    setStars(0)
     return
   }
-  document.getElementById('competences-desc').innerText = res?.id.name
+  document.getElementById('competence-desc').innerText = res?.id.name
+  setStars(res?.id.rate ?? 0)
 });
