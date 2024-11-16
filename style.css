@@ -35,6 +35,7 @@
     font-size: 10pt;
 }
 
+
 .font-bigger {
     font-size: 30pt;
     margin-top: 10vh;
@@ -280,6 +281,9 @@ justify-content: space-between;
     text-align: start;
 }
 
+#competence-chart {
+  width: 100%;
+}
 [id^=loisir-item] {
     flex: 1;
     display: flex;
