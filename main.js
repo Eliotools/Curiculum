@@ -194,70 +194,58 @@ data_fr = {
     ],
     competence : 
          [
-            {
-                name : 'HTML/CSS',
-                speed : 0.04,
-                color : 0x2f6af1,
-                pos : 1,
-                graph : {
-                    values : ['web', 'animation', 'responive', 'autonomie'],
-                    keys : ['100', '20', '80', '100'] 
-                },
-            }, {
-                name : 'JavaScript',
-                speed : 0.05,
-                color : 0xf7e029,
-                pos : 2,
-                graph : {
-                    values : ['web', 'animation', 'responive', 'autonomie'],
-                    keys : ['100', '20', '80', '100'] 
-                },
-            }, {
-                name : 'React Native',
-                speed : 0.04,
-                color : 0x67dafb,
-                pos : 3,
-                graph : {
-                    values : ['web', 'animation', 'responive', 'autonomie'],
-                    keys : ['100', '20', '80', '100'] 
-                },
-            },  {
-                name : 'Flutter',
-                speed : 0.05,
-                color : 0x59c7f8,
-                pos : 4,
-                graph : {
-                    values : ['web', 'animation', 'responive', 'autonomie'],
-                    keys : ['100', '20', '80', '100'] 
-                },
-            },  {
-                name : 'Python',
-                speed : 0.05,
-                color: 0x9c7f8,
-                pos : 5,
-                graph : {
-                    values : ['web', 'animation', 'responive', 'autonomie'],
-                    keys : ['100', '20', '80', '100'] 
-                },
-            },  {
-                name : 'C',
-                speed : 0.04,
-                color : 0x3e75a4,
-                pos : 6,
-                graph : {
-                    values : ['web', 'animation', 'responive', 'autonomie'],
-                    keys : ['100', '20', '80', '100'] 
-                },
-            },  {
-                name : 'C++',
-                speed : 0.03,
-                color : 0x699dd3,
-                pos : 7,
-                graph : {
-                    values : ['web', 'animation', 'responive', 'autonomie'],
-                    keys : ['100', '20', '80', '100'] 
-                },
-            },
+          {
+            name : 'HTML',
+            image : 'asset/html.png',
+          },
+          {
+            name : 'CSS',
+            image : 'asset/css.png',
+          }
+          ,{
+            name : 'JavaScript',
+            image : 'asset/js.png',
+          }
+          ,{
+            name : 'React Native',
+            image : 'asset/react.png',
+
+          }
+          ,{
+            name : 'Flutter',
+            image : 'asset/flutter.png',
+
+          }
+          ,{
+            name : 'Python',
+            image : 'asset/python.png',
+          }
+          ,{
+            name : 'C',
+            image : 'asset/c.png',
+
+          }
+          ,{
+            name : 'C++',
+            image : 'asset/cpp.png',
+
+          }
+          ,{
+            name : 'Tailwind',
+            image : 'asset/tailwind.png',
+          },
+          ,{
+            name : 'Notion',
+            image : 'asset/notion.png',
+          },
+          ,{
+            name : 'Jira',
+            image : 'asset/jira.png',
+          },
+          ,{
+            name : 'Github',
+            image : 'asset/github.png',
+          },
         ],
         eip : {
             description : "L'Epitech Inovative Project, c'est le projet de fin d'études à Epitech <br>De la 3e à la 5e année, les groupes de 4 à 10 étudiants créent leur projet et le poussent jusqu'à une hypothétique commercialisation.<br><br><br>",

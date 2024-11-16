@@ -1,82 +1,100 @@
-let scene, camera, renderer;
-
-function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
+function generateRandomNumber(min, max)  {
+  return Math.random() * (max - min) + min; 
+  
 }
-
-function init() {
-  scene = new THREE.Scene();
-  scene.background = new THREE.Color(0xffffff); // Fon
-
-  camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-  camera.position.set(0, 10, 20); // Vue plus en hauteur
-  camera.lookAt(0, 0, 0); // 
-  const sunGeometry = new THREE.SphereGeometry(0.2, 32, 32);
-  const sunMaterial = new THREE.MeshStandardMaterial({ color: 0x000000 });
-  const sun = new THREE.Mesh(sunGeometry, sunMaterial);
-  scene.add(sun);
-  // Renderer
-  renderer = new THREE.WebGLRenderer();
-  renderer.setSize(window.innerWidth, window.innerHeight); // Redimensionner le canevas pour s'adapter à la fenêtre
-  camera.aspect = window.innerWidth / window.innerHeight; // Ajuster le ratio de la caméra
-  camera.updateProjectionMatrix();
-  document.getElementById('competence-chart').appendChild(renderer.domElement);
-
-  const cameraLight = new THREE.PointLight(0xffffff, 0.5); // Lumière à la position de la caméra
-  cameraLight.position.copy(camera.position);
-  scene.add(cameraLight);
-  data_fr.competence.forEach(createPlanet)
-console.log(planets.length)
-}
-
-// Tableau pour stocker les planètes
-const planets = [];
-const labels = [];
-
-const createPlanet = (c) => {
-  const planetGeometry = new THREE.SphereGeometry(0.5, 16, 16);
-  const planetMaterial = new THREE.MeshStandardMaterial({ color: c.color });
- 
-  const planet = new THREE.Mesh(planetGeometry, planetMaterial);
-  planet.position.set(0, 0, 0); 
-  scene.add(planet);
-  planet.userData = { distance: c.pos, speed: getRandomInt(10)/1000+0.01, angle: getRandomInt(10) };
-  const loader = new THREE.FontLoader();
-  loader.load('https://threejs.org/examples/fonts/optimer_regular.typeface.json', function (font) {
-  const textGeometry = new THREE.TextGeometry(c.name, {
-    font: font,
-    size: 0.5,
-    height: 0.1
+   const { Engine, Render, Runner, Bodies, Composite, Mouse, MouseConstraint, Events } = Matter;
+  let shape = []
+  const engine = Engine.create();
+  const { world } = engine;
+  engine.world.gravity.y = 0.2;
+  let container = document.getElementById('competence-chart')
+  const render = Render.create({
+    element: container,
+    engine: engine,
+    options: {
+      wireframes: false,
+      background: '#FFFFFF'
+    }
   });
-  const textMaterial = new THREE.MeshBasicMaterial({ color: 0x000000 });
-  const label = new THREE.Mesh(textGeometry, textMaterial);
-  label.position.set(planet.position.x - 0.5, planet.position.y + 1, planet.position.z); // Positionner le label au-dessus de la planète
-  scene.add(label);
-  labels.push(label)
-});
-  planets.push(planet);
-}
 
-function animate() {
-  requestAnimationFrame(animate);
-  let i = 0
-  // Animer la révolution de chaque planète
-  planets.forEach(planet => {
+   Render.run(render);
+
+   const runner = Runner.create();
+   Runner.run(runner, engine);
+
+   const ground1 = Bodies.rectangle(container.clientWidth /2, container.clientHeight-20, container.clientWidth, 2, {
+    isStatic: true,
+    render: { fillStyle: '#FFFFFF' }
+  });
+  const roof = Bodies.rectangle(container.clientWidth /2, 1, container.clientWidth, 2, {
+    isStatic: true,
+    render: { fillStyle: '#2c3e50' }
+  });
+  const ground2 = Bodies.rectangle(container.clientWidth /2, container.clientHeight-5, container.clientWidth, 2, {
+    isStatic: true,
+    render: { fillStyle: '#2c3e50' }
+  });  
+  const wallL = Bodies.rectangle(container.clientWidth-1, container.clientHeight/2, 2, container.clientHeight, {
+    isStatic: true,
+    render: { fillStyle: '#2c3e50' }
+  });
+  const wallR = Bodies.rectangle(1, container.clientHeight/2, 2, container.clientHeight, {
+    isStatic: true,
+    render: { fillStyle: '#2c3e50' }
+  });
+   Composite.add(world, [ground1, ground2, wallL, wallR, roof]);
+
+
+   data_fr.competence.forEach(elem => {
     
-    planet.userData.angle += planet.userData.speed;
-    planet.position.x = planet.userData.distance * Math.cos(planet.userData.angle);
-    planet.position.z = planet.userData.distance * Math.sin(planet.userData.angle);
-    labels[i].position.x = planet.position.x - 0.5;
-    labels[i].position.y = planet.position.y + 1;
-    labels[i].position.z = planet.position.z;
-    i++;
-  });
+     const box = Bodies.rectangle(generateRandomNumber(60 ,container.clientWidth- 60), generateRandomNumber(60 ,container.clientHeight- 60), 100, 100, {
+      id : elem,
+      render: {
+        // Image comme texture
+        sprite: {
+          texture: elem.image, // Chemin vers l'image
+          xScale: 1, // Échelle horizontale de l'image
+          yScale: 1  // Échelle verticale de l'image
+        },
+        // Contour autour de la forme
+        fillStyle: 'transparent', // Pas de remplissage, uniquement le contour
+        strokeStyle: '#ff5733', // Couleur du contour
+        lineWidth: 5 // Épaisseur du contour
+      }
+    });
+    shape.push(box)
+    Composite.add(world, box);
+   });
+   const mouse = Mouse.create(render.canvas);
+  const mouseConstraint = MouseConstraint.create(engine, {
+  mouse: mouse,
+  constraint: {
+    stiffness: 0.2
+  }
+});
+Events.on(mouseConstraint, 'mousemove', function(event) {
+  const mousePosition = event.mouse.position;
+  // console.log(mousePosition)
+  let res =  shape.find((e) =>Matter.Bounds.contains(e.bounds, mousePosition) )
+  if (!res) {
+    document.getElementById('competences-desc').innerText = 'HOVER'
+    return
+  }
+  document.getElementById('competences-desc').innerText = res?.id.name
+  // if (hovered) {
+  //   hexagon.render.fillStyle = '#e74c3c'; // Changer la couleur
+  // } else {
+  //   hexagon.render.fillStyle = '#3498db'; // Restaurer la couleur d'origine
+  // }
+});
 
-  // Rendu de la scène
-  renderer.render(scene, camera);
-}
 
+   window.addEventListener('resize', () => {
+     render.bounds.max.x = window.innerWidth;
+     render.bounds.max.y = window.innerHeight;
+     render.options.width = window.innerWidth;
+     render.options.height = window.innerHeight;
 
-
-init();
-animate();
+     Render.stop(render);
+     Render.run(render);
+   });
