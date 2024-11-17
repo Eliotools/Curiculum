@@ -2,7 +2,7 @@ function generateRandomNumber(min, max)  {
   return Math.random() * (max - min) + min; 
 }
 
-starFilled = '★'
+starFilled = '⭐'
 starEmpty = '☆'
 
 const setStars = (rate) => {
