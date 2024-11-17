@@ -64,12 +64,24 @@ body {
 }
 
 
- [id^=content] {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
+.formation-index {
+  padding: 5px;
+  background-color: #4f4f4f;
+  border-radius: 10px;
+  margin: 2px;
+  color: white;
+}
+
+[id^=experience-item-index] {
+  display: flex;
+  flex-wrap: wrap;
+}
+[id^=content] {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
 }
 
 #action-formation-list, #action-experience-list, #action-eip-content {

@@ -87,6 +87,14 @@ const buildExperience = (node) => {
             li.innerHTML = elem
             list.appendChild(li)
         })
+        let indexContainer = document.getElementById('experience-item-index-' + index)
+        item.index?.forEach((elem) => {
+          indexNode = document.createElement('div')
+          indexNode.classList.add('formation-index')
+          indexNode.innerText= elem;
+          indexContainer.appendChild(indexNode)
+        })
+
     })
     card.style.display = 'none'
 }
@@ -125,21 +133,33 @@ data_fr = {
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXFOGuHabIn7GjpXicZ1p0cwAHPspmnwt7PYyUV4usbg&s"
     }],
     experience : [
-            {
-                "dateStart" : "06/23",
-                "dateEnd" : "Now",
-                "name" : "Jagger-Lewis",
-                "lenght" :"1 an",
-                "type" : "CDI",
-                "desc" : ["Application mobile en <b>Flutter</b>", "Développement d'une API <b>JS<b>", "Développement de pipe-line en <b>Python<b>", "Mise en place d'outil de <b>CI</b> sur les différentes solution "],
-                "image" : 'https://assets-global.website-files.com/6549f4ba8294cf140608d893/654b6a20bf057d68593d620a_logo.png'
-            }, {
+      {
+          "dateStart" : "06/23",
+          "dateEnd" : "Now",
+          "name" : "Jagger-Lewis",
+          "lenght" :"1 an",
+          "type" : "CDI",
+          "index" : ["AGILE","NOTION", "FLUTTER"],
+          "desc" : ['<b>Project Owner | Lead Teck Front</b>','Création de <b>Roadmaps</b> détaillées','Rédation du <b>UseCase</b>' ,'Developpement application mobile en <b>Flutter</b>'],
+          "image" : 'https://assets-global.website-files.com/6549f4ba8294cf140608d893/654b6a20bf057d68593d620a_logo.png'
+      },
+      {
+          "dateStart" : "06/21",
+          "dateEnd" : "01/24",
+          "name" : "DEDAL",
+          "lenght" :"3 an",
+          "type" : "PROJET",
+          "index" : ["AGILE", "JIRA", "FLUTTER", "JS", "INTERNATIONAL"],
+          "desc" : ['<b>Project Owner | Lead Teck Front</b>','Gestion équipe <b>international<b/>','<b>Finaliste</b> concours france sur 60 équipes' ,"Projet de fin d'étude"],
+          "image" : 'https://assets-global.website-files.com/6549f4ba8294cf140608d893/654b6a20bf057d68593d620a_logo.png'
+      }, {
                 "dateStart" : "03/22",
                 "dateEnd" : "06/22",
                 "name" : "Chantier Carré",
                 "lenght" :"4 mois",
                 "type" : "Stage",
-                "desc" : ["Application Web en <b>Next JS<b>", "Server Less", "Gestion d'une équipe de 3 personnes", "Organisation <b>Agile<b>"],
+                "index" : ["SCRUM","NOTION", 'NEXT'],
+                "desc" : ['<b>Lead Teck</b>', "Application Web en <b>Next JS<b>", "Server Less", "Gestion d'une équipe de 3 personnes", "Organisation <b>Agile<b>"],
                 "image" : "https://media.licdn.com/dms/image/C4D0BAQF7XnLK8hBAcQ/company-logo_200_200/0/1630474703807/chantiercarr_logo?e=1723075200&v=beta&t=BFU4ASoiBSeIvH_fwp8DgC7LO9ov8Nr9iXf84lGfnbY"
             },{
                 "dateStart" : "09/21",
@@ -358,65 +378,72 @@ data_en = {
             }
     ],
     competence : 
-         [
-            {
-                name : 'HTML/CSS',
-                value : '4',
-                color : 'rgba(47, 106, 241, 0.2)',
-                graph : {
-                    values : ['web', 'animation', 'responive', 'autonomie'],
-                    keys : ['100', '20', '80', '100'] 
-                },
-            }, {
-                name : 'JavaScript',
-                value : '5',
-                color : 'rgba(247, 224, 41, 0.5)',
-                graph : {
-                    values : ['web', 'animation', 'responive', 'autonomie'],
-                    keys : ['100', '20', '80', '100'] 
-                },
-            }, {
-                name : 'React Native',
-                value : '4',
-                color : 'rgba(103, 218, 251, 0.5)',
-                graph : {
-                    values : ['web', 'animation', 'responive', 'autonomie'],
-                    keys : ['100', '20', '80', '100'] 
-                },
-            },  {
-                name : 'Flutter',
-                value : '5',
-                color : 'rgba(89, 199, 248, 0.5)',
-                graph : {
-                    values : ['web', 'animation', 'responive', 'autonomie'],
-                    keys : ['100', '20', '80', '100'] 
-                },
-            },  {
-                name : 'Python',
-                value : '5',
-                color: 'rgba(89, 199, 248, 0.5)',
-                graph : {
-                    values : ['web', 'animation', 'responive', 'autonomie'],
-                    keys : ['100', '20', '80', '100'] 
-                },
-            },  {
-                name : 'C',
-                value : '4',
-                color : 'rgba(62, 117, 164, 0.5)',
-                graph : {
-                    values : ['web', 'animation', 'responive', 'autonomie'],
-                    keys : ['100', '20', '80', '100'] 
-                },
-            },  {
-                name : 'C++',
-                value : '3',
-                color : 'rgba(105, 157, 211, 0.5)',
-                graph : {
-                    values : ['web', 'animation', 'responive', 'autonomie'],
-                    keys : ['100', '20', '80', '100'] 
-                },
-            },
-        ],
+    [
+      {
+        name : 'HTML',
+        image : 'asset/html.png',
+        rate : 5,
+      },
+      {
+        name : 'CSS',
+        image : 'asset/css.png',
+        rate : 5
+      }
+      ,{
+        name : 'JavaScript',
+        image : 'asset/js.png',
+        rate : 5
+      }
+      ,{
+        name : 'React Native',
+        image : 'asset/react.png',
+        rate : 5
+
+      }
+      ,{
+        name : 'Flutter',
+        image : 'asset/flutter.png',
+        rate : 5
+
+      }
+      ,{
+        name : 'Python',
+        image : 'asset/python.png',
+        rate : 5
+      }
+      ,{
+        name : 'C',
+        image : 'asset/c.png',
+        rate : 3
+
+      }
+      ,{
+        name : 'C++',
+        image : 'asset/cpp.png',
+        rate : 3
+
+      }
+      ,{
+        name : 'Tailwind',
+        image : 'asset/tailwind.png',
+        rate : 3
+      },
+      ,{
+        name : 'Notion',
+        image : 'asset/notion.png',
+        rate : 5
+      },
+      ,{
+        name : 'Jira',
+        image : 'asset/jira.png',
+        rate : 4
+      },
+      ,{
+        name : 'Github',
+        image : 'asset/github.png',
+        rate : 5
+      },
+    ],
         eip : {
             description : "The Epitech Inovative Project is the end-of-study project at Epitech<br>From 3rd to 5th year, groups of 4 to 10 students create their project and push it to a hypothetical commercialization.<br><br><br>.",
             dedal_description : "For 2 years, I was in charge of the DEDAL group, with whom we made it all the way to the national finals to present our project for a mobile application to simplify tourist visits.",
