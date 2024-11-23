@@ -10,6 +10,14 @@
     --dote-color:  #721817;/* rgb(250, 231, 255);*/
  }
 
+ .slides {
+   height: 20VH;
+   align-items: center;
+ }
+
+ .slide {
+   background-color: red;
+ }
 .font-big {
     font-family: "Freeman", sans-serif;
     font-size: x-large;

@@ -49,12 +49,16 @@ local_en = {
     "loisir-item-desc2": "\n<li>Reading: LoveCraft</li>\n<li>Lego</li>\n<li>Magic the Gathering</li>\n",
     "loisir-item-name": "To let off steam",
     "eip-get-site": "Go to website : ",
-    "competence-desc" : "Wipe your mouse over the icons"
+    // "competence-desc" : "Wipe your mouse over the icons"
 
 } 
 
 let data_local = local ? local_fr : local_en
 
-Object.keys(data_local).forEach((key) => 
-    document.getElementById(key).innerHTML = data_local[key]
+Object.keys(data_local).forEach((key) => {
+  const node = document.getElementById(key)
+  if (node) {
+    node.innerHTML = data_local[key]
+  }
+}
 )

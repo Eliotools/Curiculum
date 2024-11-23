@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet" />
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
+  
     <title>Eliot MARTIN</title>
 </head>
 <body>
@@ -26,14 +28,22 @@
                     Bac +5
                 </div>
             </div>
-            <div id="nav">
+            <div id="content-competence">
+              <div class="glide">
+                <div class="glide__track" data-glide-el="track">
+                  <ul class="glide__slides slides" id="glides_container">
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- <div id="nav">
                 <div class="nav-item" selected="true" id="action-nav-info">INFOS</div>
                 <div class="nav-item" id="action-nav-formation">FORMATION & DÎPLOMES</div>
                 <div class="nav-item" id="action-nav-experience">EXPERIENCE</div>
                 <div class="nav-item" id="action-nav-loisir">LOISIR</div>
                 <div class="nav-item" id="action-nav-competence">COMPETENCE</div>
                 <div class="nav-item" id="action-nav-eip">EIP</div>
-            </div>
+            </div> -->
             <div id="footer">
                 <div id="link">
                     <a class="footer-link" href="https://github.com/Eliotools" target="_blank" >
@@ -129,23 +139,13 @@
                 </div>
             </div>
         </div>
-        <div id="content-competence">
-          <div id="competences-title" class="font-bigger">COMPETENCES</div>
-          <div id="competence-desc" class="font-big">XX</div>
-          <div id="stars-container">
-            <span class="star" data-value="1">☆</span>
-            <span class="star" data-value="2">☆</span>
-            <span class="star" data-value="3">☆</span>
-            <span class="star" data-value="4">☆</span>
-            <span class="star" data-value="5">☆</span>
-          </div>
-          <div id="competence-chart"></div>
-        </div>
     </div>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
+
 <script src="main.js"></script>
 <script src="competance.js"></script>
+
 <script src="translate.js"></script>
 
 </html>
