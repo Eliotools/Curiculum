@@ -278,6 +278,11 @@ data_fr = {
             image : 'asset/github.png',
             rate : 5
           },
+          ,{
+            name : 'Agile',
+            image : 'asset/agile.png',
+            rate : 5
+          }
         ],
         eip : {
             description : "L'Epitech Inovative Project, c'est le projet de fin d'études à Epitech <br>De la 3e à la 5e année, les groupes de 4 à 10 étudiants créent leur projet et le poussent jusqu'à une hypothétique commercialisation.<br><br><br>",

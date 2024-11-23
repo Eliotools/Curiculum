@@ -1,23 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Freeman&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-:root {
-    --backgroud-color: #F3EFE0;/*rgb(22, 22, 22); */
-    --container-color: #FEFFEE; /*rgb(19, 16, 19); */
-    --border-color: #4d1211a2; /* rgba(155, 119, 14, 0.7);*/
-    --text-color:  black;/* beige;*/
-    --bold-color:  black;/* White;*/
-    --dote-color:  #721817;/* rgb(250, 231, 255);*/
- }
 
  .slides {
-   height: 20VH;
+  height: 10VH;
    align-items: center;
+ }
+ .tooltip {
+   position: absolute;
+   background: #333;
+   color: #fff;
+   padding: 5px 10px;
+   border-radius: 5px;
+   font-size: 12px;
+   white-space: nowrap;
+   visibility: hidden;
+   opacity: 0;
+   transition: opacity 0.2s ease;
+   z-index: 10;
+ }
+
+ .styled-container {
+   background-color: #2A405B;
+   border-radius: 8px;
+   color: white;
+   padding: 16px;
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 700;
  }
 
  .slide {
-   background-color: red;
+   width: 100%;
+   display: flex;
+   justify-content: center;
  }
+    
+        img {
+          width: 40%;
+        }
 .font-big {
     font-family: "Freeman", sans-serif;
     font-size: x-large;
@@ -44,8 +64,6 @@
 
 .font-bigger {
     font-size: 30pt;
-    margin-top: 10vh;
-      margin-bottom: 5vh;
 }
 
 body {
