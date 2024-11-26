@@ -255,7 +255,7 @@ li {
 .dote {
     width: 12px;
     background-color: #000000;
-    position: aboslute;
+    position: absolute;
     left: -50%;
     border-radius: 50%;
     aspect-ratio: 1;
