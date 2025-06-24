@@ -112,32 +112,42 @@ switchContent = (type, node) => {
 
 data_fr = {
     formation : [    {
-        "name" : "Epitech Lille",
-        "desc" : ["Master d'expert en technologies de l'information.", "Approfondissement gestion de projet"],
+        "name" : "Master d'expert en technologies de l'information",
+        "desc" : ["Epitech Lille", "Approfondissement gestion de projet"],
         "date" : '2024',
         "image" : "https://yt3.googleusercontent.com/8mA9eT4kl-CHHHQdCtNfMCWeL6RFFQElfY1ytMoNHF5BG1iMtHQ0b9YaonhC7bydvrG-9hkA=s900-c-k-c0x00ffffff-no-rj"
     },{
-        "name" : "Technological University Dublin",
-        "desc" : ["Diplome d'IT management", "Strategic & project Management (Scrum / Agile)", "Business Modeling"],
+        "name" : "Diplome d'IT management",
+        "desc" : ["Technological University Dublin", "Strategic & project Management (Scrum / Agile)", "Business Modeling"],
         "date" : '2023',
         "image" : "https://www.ieabroad.com/wp-content/uploads/TUD.png"
     }, {
-        "name" : "Epitech Lille",
-        "desc" : ["Bachelor", "Pédagogie par project", "Travaux de groupe"],
+        "name" : "Bachelor",
+        "desc" : ["Epitech Lille", "Pédagogie par project", "Travaux de groupe"],
         "date" : '2022',
         "image" : "https://yt3.googleusercontent.com/8mA9eT4kl-CHHHQdCtNfMCWeL6RFFQElfY1ytMoNHF5BG1iMtHQ0b9YaonhC7bydvrG-9hkA=s900-c-k-c0x00ffffff-no-rj"
     }, {
-        "name" : "Lycée Guist'hau, Nantes",
-        "desc" : ["Bacalauréa Scientifique","Spécialité Mathématique"],
+        "name" : "Bacalauréa Scientifique",
+        "desc" : ["Lycée Guist'hau, Nantes","Spécialité Mathématique"],
         "date" : '2019',
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXFOGuHabIn7GjpXicZ1p0cwAHPspmnwt7PYyUV4usbg&s"
     }],
     experience : [
       {
+        "dateStart" : "03/25",
+        "dateEnd" : "07/25",
+        "name" : "Stracker",
+        "lenght" :"4 mois",
+        "type" : "CDI",
+        "index" : ["TS","REACT", "RUSH"],
+        "desc" : ['<b>Project Owner | Lead Teck Front</b>','Création de <b>Roadmaps</b> détaillées','Rédation du <b>UseCase</b>' ,'Developpement application mobile en <b>Flutter</b>'],
+        "image" : 'https://assets-global.website-files.com/6549f4ba8294cf140608d893/654b6a20bf057d68593d620a_logo.png'
+    },
+      {
           "dateStart" : "06/23",
-          "dateEnd" : "Now",
+          "dateEnd" : "03/25",
           "name" : "Jagger-Lewis",
-          "lenght" :"1 an",
+          "lenght" :"2 an",
           "type" : "CDI",
           "index" : ["AGILE","NOTION", "FLUTTER"],
           "desc" : ['<b>Project Owner | Lead Teck Front</b>','Création de <b>Roadmaps</b> détaillées','Rédation du <b>UseCase</b>' ,'Developpement application mobile en <b>Flutter</b>'],
@@ -166,22 +176,16 @@ data_fr = {
                 "dateEnd" : "02/22",
                 "name" : "Décathlon Btwin Village",
                 "lenght" :"8 mois",
+                "index" : ["HTML", "CSS", "Google AppScript"],
                 "type" : "Stage 2 jours semaine",
                 "desc" : ["Maintient d'une application de gestion de stock", "<b>HTML / CSS & Google AppScript"],
                 "image" : "https://cdn6.aptoide.com/imgs/c/5/d/c5d8abab5e239065201a510f9fc15141_icon.png"
-            },{
-                "dateStart" : "06/21",
-                "dateEnd" : "08/21",
-                "name" : "Castorama",
-                "lenght" :"2 mois",
-                "type" : "Interim",
-                "desc" : ["Job d'été", "Mise en rayon", "Préparation de commande drive"],
-                "image" : "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAh1BMVEX////2+v0IetcIfNgRgNkAdtYAeNfp8/ujzO9ztOhkrOZ9ueqw1PLi7/pbp+W32PMojNwXg9o/mODH4PX6/P4jidxQoePY6vjN5Pb/+uD/7X//63OKrWGBqmsihLz/4B//3ADl0RgJe9CVxe0vkN4ohrj/5UPBwzX/9sH/9LdLlJpBkKJtsegsk00aAAAAyklEQVR4AdSSQxYEMRRFg7JtG/tfX6OsnB73m0Q334AgiPAkigjQzCT8bwDL8YIgSpAAyAparnj4BKgUs0mT74CKmIOUG8Dq83HGNPYG8NPBMC0o2Ywt32KwqOndmow57j0Lc9p7W0Z+EIZRFCcbwH3fdbApzSblxQqUX6DaDWSLapKFZn5v0TkGcye6vh+GEe9Z6JMPOO0FCQBCHSqJZaWKQRIgVnK5lG4AMPGRcH5004EPAGCFxYjNkSYKSuJ7OpzKwkMxXxDM/gCBTxHm74MunQAAAABJRU5ErkJggg=="
             },{
                 "dateStart" : "09/20",
                 "dateEnd" : "12/20",
                 "name" : "Sygmatel",
                 "lenght" :"4 mois",
+                "index" : ["Python"],
                 "type" : "Stage",
                 "desc" : ["Creation d'une CVteck", "Application windows" ,"<b>Python"],
                 "image" : "https://www.sygmatel.fr/wp-content/uploads/2021/04/Sygmatel-LOW.jpg"
@@ -190,26 +194,10 @@ data_fr = {
                 "dateStart" : "<br>",
                 "name" : "Respir@ction",
                 "lenght" :"2 jours",
+                "index" : ["User Experience", "BrainStorming"],
                 "type" : "Hackathon",
                 "desc" : ["Ideation d'un projet autour de l'allergie", "<b>Marketing, User Experience, Maquette", "Travail en collaboration avec l'Afpral"],
                 "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpESjnY33osAlDQo1tLFSAY6ccmYf014IHLTBm9AkDWA&s"
-            },{
-                "dateStart" : "07/18",
-                "dateEnd" : "08/18",
-                "name" : "Pheonix Pharma",
-                "lenght" :"1 mois",
-                "type" : "Interim",
-                "desc" : ["Job d'été", "Agent de quai", "Stockage de produits pharmaceutique", "Création de commande clients"],
-                "image" : "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABDElEQVR4AYzQgQbCQByA8ZKBEMKCSUgIhBACbElICIEEQggECIQQyEaPEAIBkkySSULPEHqM9V1uuXQy/Nz8d75zlwjDMCnkPCeFPCam52xZb/AR4IQF6jDE/ogasHGAi0bOs4usJixUMZfREdKfgDy5iatcTR15iIUzVjCiQBFH2DLma7nvK5RQwQWtKLDETLlK+MeDq2XlWwS8VUEEeuJDEwg4tcs65v9dmXdgYAjr84g/AdfZKLN+NCc2VfdrA9IOZdSwVuaDeAG9JzJfAQYFGDECe7SVfSYyIuBzr9eM8YUBFleyQg10h0cjaQYgohEjIREyAC0hYSZlUNxD498SQzNmUqY8M1GcnQGOkvCOpiJKjwAAAABJRU5ErkJggg=="
-            },
-            {
-                "dateStart" : "07/17",
-                "dateEnd" : "08/17",
-                "name" : "Sygmatel",
-                "lenght" :"1 mois",
-                "type" : "Interim",
-                "desc" : ["Job d'été", "Électricien", "Instalisation éléctrique dans un immeuble, "],
-                "image" : "https://www.sygmatel.fr/wp-content/uploads/2021/04/Sygmatel-LOW.jpg"
             }
     ],
     competence : 
@@ -294,38 +282,59 @@ data_fr = {
 
 data_en = {
     formation : [    {
-        "name" : "Epitech Lille",
-        "desc" : ["Master's degree in information technology.", "Project management"],
+        "name" : "Master's degree in information technology",
+        "desc" : ["Epitech Lille", "Project management"],
         "date" : '2024',
         "image" : "https://yt3.googleusercontent.com/8mA9eT4kl-CHHHQdCtNfMCWeL6RFFQElfY1ytMoNHF5BG1iMtHQ0b9YaonhC7bydvrG-9hkA=s900-c-k-c0x00ffffff-no-rj"
     },{
-        "name" : "Technological University Dublin",
-        "desc" : ["IT management diploma", "Strategic & project Management (Scrum / Agile)", "Business Modeling"],
+        "name" : "IT management diploma",
+        "desc" : ["Technological University Dublin", "Strategic & project Management (Scrum / Agile)", "Business Modeling"],
         "date" : '2023',
         "image" : "https://www.ieabroad.com/wp-content/uploads/TUD.png"
     }, {
-        "name" : "Epitech Lille",
-        "desc" : ["Bachelor's degree", "Project-based teaching", "Group work"],
+        "name" : "Bachelor's degree",
+        "desc" : ["Epitech Lille", "Project-based teaching", "Group work"],
         "date" : '2022',
         "image" : "https://yt3.googleusercontent.com/8mA9eT4kl-CHHHQdCtNfMCWeL6RFFQElfY1ytMoNHF5BG1iMtHQ0b9YaonhC7bydvrG-9hkA=s900-c-k-c0x00ffffff-no-rj"
     }, {
-        "name" : "Lycée Guist'hau, Nantes",
-        "desc" : ["Bacalaurea Scientific","Mathematics"],
+        "name" : "Scientific Bacalaurea",
+        "desc" : ["Lycée Guist'hau, Nantes","Mathematics"],
         "date" : '2019',
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXFOGuHabIn7GjpXicZ1p0cwAHPspmnwt7PYyUV4usbg&s"
     }],
     experience : [
+        {
+            "dateStart" : "07/25",
+            "dateEnd" : "Now",
+            "name" : "Stracker",
+            "lenght" :"4 months",
+            "index" : ["TS","REACT", "RUSH"],
+            "type" : "CDI",
+            "desc" : ["Web application in <b>React TS</b>", "Managing <b>Monorepo<b>", "Configuration mangement with <b>Pulumi<b>"],
+            "image" : 'https://assets-global.website-files.com/6549f4ba8294cf140608d893/654b6a20bf057d68593d620a_logo.png'
+        },
             {
-                "dateStart" : "06/23",
-                "dateEnd" : "Now",
+              "dateStart" : "06/23",
+              "dateEnd" : "03/25",
+                "index" : ["AGILE","NOTION", "FLUTTER"],
                 "name" : "Jagger-Lewis",
-                "lenght" :"1 year",
+                "lenght" :"2 years",
                 "type" : "CDI",
-                "desc" : ["Mobile application in <b>Flutter</b>.", "Development of an API <b>JS<b>.", "Pipeline development in <b>Python<b>.", "Implementation of <b>CI</b> tools on various solutions"],
+                "desc" : ["Mobile application in <b>Flutter</b>", "Development of an API <b>JS<b>", "Pipeline development in <b>Python<b>", "Implementation of <b>CI</b> tools on various solutions"],
                 "image" : 'https://assets-global.website-files.com/6549f4ba8294cf140608d893/654b6a20bf057d68593d620a_logo.png'
             }, {
+              "dateStart" : "06/21",
+              "dateEnd" : "01/24",
+              "name" : "DEDAL",
+              "lenght" :"3 years",
+              "type" : "PROJET",
+              "index" : ["AGILE", "JIRA", "FLUTTER", "JS", "INTERNATIONAL"],
+              "desc" : ['<b>Project Owner | Lead Teck Front</b>','Team management <b>international<b/>','<b>Finalist</b> in the France competition on 60 teams' ,"End of study project"],
+              "image" : 'https://assets-global.website-files.com/6549f4ba8294cf140608d893/654b6a20bf057d68593d620a_logo.png'
+          }, {
                 "dateStart" : "03/22",
                 "dateEnd" : "06/22",
+                "index" : ["SCRUM","NOTION", 'NEXT'],
                 "name" : "Chantier Carré",
                 "lenght" :"4 months",
                 "type" : "Internship",
@@ -336,22 +345,16 @@ data_en = {
                 "dateEnd" : "02/22",
                 "name" : "Décathlon Btwin Village",
                 "lenght" :"8 months",
+                "index" : ["HTML", "CSS", "Google AppScript"],
                 "type" : "Stage 2 jours semaine",
                 "desc" : ["Maintenance of a stock management application", "<b>HTML / CSS & Google AppScript"],
                 "image" : "https://cdn6.aptoide.com/imgs/c/5/d/c5d8abab5e239065201a510f9fc15141_icon.png"
-            },{
-                "dateStart" : "06/21",
-                "dateEnd" : "08/21",
-                "name" : "Castorama",
-                "lenght" :"2 months",
-                "type" : "Interim",
-                "desc" : ["Summer job", "Shelving", "Drive order picking"],
-                "image" : "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAh1BMVEX////2+v0IetcIfNgRgNkAdtYAeNfp8/ujzO9ztOhkrOZ9ueqw1PLi7/pbp+W32PMojNwXg9o/mODH4PX6/P4jidxQoePY6vjN5Pb/+uD/7X//63OKrWGBqmsihLz/4B//3ADl0RgJe9CVxe0vkN4ohrj/5UPBwzX/9sH/9LdLlJpBkKJtsegsk00aAAAAyklEQVR4AdSSQxYEMRRFg7JtG/tfX6OsnB73m0Q334AgiPAkigjQzCT8bwDL8YIgSpAAyAparnj4BKgUs0mT74CKmIOUG8Dq83HGNPYG8NPBMC0o2Ywt32KwqOndmow57j0Lc9p7W0Z+EIZRFCcbwH3fdbApzSblxQqUX6DaDWSLapKFZn5v0TkGcye6vh+GEe9Z6JMPOO0FCQBCHSqJZaWKQRIgVnK5lG4AMPGRcH5004EPAGCFxYjNkSYKSuJ7OpzKwkMxXxDM/gCBTxHm74MunQAAAABJRU5ErkJggg=="
             },{
                 "dateStart" : "09/20",
                 "dateEnd" : "12/20",
                 "name" : "Sygmatel",
                 "lenght" :"4 months",
+                "index" : ["Python"],
                 "type" : "Internship",
                 "desc" : ["Creating a CVteck", "Application windows" ,"<b>Python"],
                 "image" : "https://www.sygmatel.fr/wp-content/uploads/2021/04/Sygmatel-LOW.jpg"
@@ -360,27 +363,12 @@ data_en = {
                 "dateStart" : "<br>",
                 "name" : "Respir@ction",
                 "lenght" :"2 days",
+                "index" : ["User Experience", "BrainStorming"],
                 "type" : "Hackathon",
                 "desc" : ["Ideation of an allergy project", "<b>Marketing, User Experience, Model", "Working in collaboration with Afpral"],
                 "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpESjnY33osAlDQo1tLFSAY6ccmYf014IHLTBm9AkDWA&s"
-            },{
-                "dateStart" : "07/18",
-                "dateEnd" : "08/18",
-                "name" : "Pheonix Pharma",
-                "lenght" :"1 month",
-                "type" : "Interim",
-                "desc" : ["Summer job", "Dock agent", "Storage of pharmaceutical products", "Customer order creation"],
-                "image" : "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABDElEQVR4AYzQgQbCQByA8ZKBEMKCSUgIhBACbElICIEEQggECIQQyEaPEAIBkkySSULPEHqM9V1uuXQy/Nz8d75zlwjDMCnkPCeFPCam52xZb/AR4IQF6jDE/ogasHGAi0bOs4usJixUMZfREdKfgDy5iatcTR15iIUzVjCiQBFH2DLma7nvK5RQwQWtKLDETLlK+MeDq2XlWwS8VUEEeuJDEwg4tcs65v9dmXdgYAjr84g/AdfZKLN+NCc2VfdrA9IOZdSwVuaDeAG9JzJfAQYFGDECe7SVfSYyIuBzr9eM8YUBFleyQg10h0cjaQYgohEjIREyAC0hYSZlUNxD498SQzNmUqY8M1GcnQGOkvCOpiJKjwAAAABJRU5ErkJggg=="
             },
-            {
-                "dateStart" : "07/17",
-                "dateEnd" : "08/17",
-                "name" : "Sygmatel",
-                "lenght" :"1 month",
-                "type" : "Interim",
-                "desc" : ["Summer job", "Electrician", "Electrical installation in a building"],
-                "image" : "https://www.sygmatel.fr/wp-content/uploads/2021/04/Sygmatel-LOW.jpg"
-            }
+            
     ],
     competence : 
     [
