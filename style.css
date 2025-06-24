@@ -339,7 +339,6 @@ justify-content: space-between;
 
 [id^=loisir-item-desc] {
     gap: 20px;
-    text-align: start;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -365,15 +364,16 @@ justify-content: space-between;
 .mobil-hide {
     display: none;
 }
+.center-text {
+  text-align: center;
+}
 
 @media only screen and (min-width: 600px) {
     .main-content {
         width: 60%;
     }
 
-    #info {
-        text-align: center;
-    }
+   
 
     [id^=formation-item-date], [id^=experience-item-date-lenght] {
         font-size: large;
